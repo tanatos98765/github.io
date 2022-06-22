@@ -3,11 +3,11 @@ import {OrbitControls} from 'OrbitControls';
 import {RectAreaLightUniformsLib} from  'RectAreaLightUniformsLib';
 import {RectAreaLightHelper} from 'RectAreaLightHelper';
 import { GLTFLoader } from 'GltfLoader';
-import Stats from "../examples/jsm/libs/stats.module.js";
+import Stats from "./examples/jsm/libs/stats.module.js";
 //import { RGBELoader } from 'RGBELoader';
 
-import {Octree} from "../examples/jsm/math/Octree.js" // 3차원 공간을 분할 하고 빠르게 충돌검사.
-import {Capsule} from "../examples/jsm/math/Capsule.js"
+import {Octree} from "./examples/jsm/math/Octree.js" // 3차원 공간을 분할 하고 빠르게 충돌검사.
+import {Capsule} from "./examples/jsm/math/Capsule.js"
 
 //import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 
