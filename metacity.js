@@ -191,7 +191,7 @@ class App{
     _setupLight()
     {
         const color = 0xffffff;
-        const intensity = 1;
+        const intensity = 1.5;
         const directionalLight = new THREE.DirectionalLight(color, intensity);
         directionalLight.position.set( 5, 148, -160 );
         directionalLight.target.position.set(0,0,0);
@@ -215,9 +215,9 @@ class App{
         this._scene.add(helper);
 
 
-        //const ambientLight = new THREE.AmbientLight( 0xffffff, 1);
-        //ambientLight.position.set(0, 0, 0);
-        //this._scene.add(ambientLight);
+        const ambientLight = new THREE.AmbientLight( 0xffffff, 1);
+        ambientLight.position.set(0, 0, 0);
+        this._scene.add(ambientLight);
          
         // const directionalLight2 = new THREE.DirectionalLight(color, 0.6);
         // directionalLight2.position.set(40, 20, -20 );
