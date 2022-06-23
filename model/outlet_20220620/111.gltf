@@ -3,6 +3,9 @@
     "version": "2.0",
     "generator": "babylon.js glTF exporter for 3dsmax 2023 v20220617.2"
   },
+  "extensionsUsed": [
+    "KHR_lights_punctual"
+  ],
   "scene": 0,
   "scenes": [
     {
@@ -138,7 +141,11 @@
         128,
         129,
         130,
-        131
+        131,
+        132,
+        133,
+        134,
+        135
       ]
     }
   ],
@@ -2314,6 +2321,82 @@
         0.6
       ],
       "name": "Fence006"
+    },
+    {
+      "translation": [
+        36.3087769,
+        5.82864237,
+        0.043837633
+      ],
+      "rotation": [
+        -0.707106769,
+        0.0,
+        0.0,
+        0.707106769
+      ],
+      "name": "Omni002",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      }
+    },
+    {
+      "translation": [
+        12.137208,
+        5.82864237,
+        0.043837633
+      ],
+      "rotation": [
+        -0.707106769,
+        0.0,
+        0.0,
+        0.707106769
+      ],
+      "name": "Omni003",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 1
+        }
+      }
+    },
+    {
+      "translation": [
+        -12.0343628,
+        5.82864237,
+        0.043837633
+      ],
+      "rotation": [
+        -0.707106769,
+        0.0,
+        0.0,
+        0.707106769
+      ],
+      "name": "Omni004",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 2
+        }
+      }
+    },
+    {
+      "translation": [
+        -36.2059326,
+        5.82864237,
+        0.043837633
+      ],
+      "rotation": [
+        -0.707106769,
+        0.0,
+        0.0,
+        0.707106769
+      ],
+      "name": "Omni005",
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 3
+        }
+      }
     }
   ],
   "meshes": [
@@ -10262,5 +10345,47 @@
       "magFilter": 9729,
       "minFilter": 9987
     }
-  ]
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "color": [
+            0.905882359,
+            0.882352948,
+            0.192156866
+          ],
+          "intensity": 0.1,
+          "type": "point"
+        },
+        {
+          "color": [
+            1.0,
+            0.192156866,
+            0.192156866
+          ],
+          "intensity": 0.1,
+          "type": "point"
+        },
+        {
+          "color": [
+            0.2509804,
+            0.192156866,
+            1.0
+          ],
+          "intensity": 0.1,
+          "type": "point"
+        },
+        {
+          "color": [
+            0.192156866,
+            1.0,
+            0.286274523
+          ],
+          "intensity": 0.1,
+          "type": "point"
+        }
+      ]
+    }
+  }
 }
