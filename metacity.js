@@ -354,13 +354,13 @@ class App{
     {
         
         //for( let j = 0 ; j < 1 ; j++ ){
-            for ( let i = 0 ; i < 4 ; i++){
+            //for ( let i = 0 ; i < 4 ; i++){
                 new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
     
                     const model = gltf.scene;
     
                     
-                    model.position.set( 0, 0 , i * 100 );
+                    model.position.set( 0, 0 , 0 );
     
                     gltf.scene.traverse(child => {
                         const name = child.name;
@@ -408,7 +408,7 @@ class App{
                         }
                     });
                 });
-            }
+            //}
       //  }
         
 
