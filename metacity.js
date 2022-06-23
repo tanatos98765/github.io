@@ -215,9 +215,9 @@ class App{
         this._scene.add(helper);
 
 
-        const ambientLight = new THREE.AmbientLight( 0xffffff, 1);
-        ambientLight.position.set(0, 0, 0);
-        this._scene.add(ambientLight);
+        //const ambientLight = new THREE.AmbientLight( 0xffffff, 1);
+        //ambientLight.position.set(0, 0, 0);
+        //this._scene.add(ambientLight);
          
         // const directionalLight2 = new THREE.DirectionalLight(color, 0.6);
         // directionalLight2.position.set(40, 20, -20 );
