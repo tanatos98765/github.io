@@ -168,7 +168,7 @@ class App{
         // )
         // Camera.zoom = 0.15;
 
-        camera.position.set(10,10,10);
+        camera.position.set(10,100,100);
         //camera.lookAt(0,0,0);
 
         this._camera = camera;
@@ -190,36 +190,34 @@ class App{
     }
     _setupLight()
     {
-        const color = 0xffffff;
-        const intensity = 1;
-        const directionalLight = new THREE.DirectionalLight(color, intensity);
-        directionalLight.position.set( 5, 148, -160 );
-        directionalLight.target.position.set(0,0,0);
+        // const color = 0xffffff;
+        // const intensity = 4;
+        // const directionalLight = new THREE.DirectionalLight(color, intensity);
+        // directionalLight.position.set( 5, 148, -160 );
+        // directionalLight.target.position.set(0,0,0);
         
-        this._scene.add(directionalLight);
-        this._scene.add(directionalLight.target);
-        this._directionalLight = directionalLight;        
+        // this._scene.add(directionalLight);
+        // this._scene.add(directionalLight.target);
+        // this._directionalLight = directionalLight;        
 
-        directionalLight.castShadow = true;
-        directionalLight.shadow.mapSize.width = 1024;
-        directionalLight.shadow.mapSize.heught = 1024;
-        directionalLight.shadow.camera.top = directionalLight.shadow.camera.right = 70;
-        directionalLight.shadow.camera.bottom = directionalLight.shadow.camera.left = -70;
-        directionalLight.shadow.camera.near =50;
-        directionalLight.shadow.camera.far = 500;
-        directionalLight.shadow.radius = 5;
-        const directionalLightHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
-        this._scene.add(directionalLightHelper);
-        // 헬퍼 객체
-        const helper = new THREE.DirectionalLightHelper(directionalLight, 10); 
-        this._scene.add(helper);
-
-
+        // directionalLight.castShadow = true;
+        // directionalLight.shadow.mapSize.width = 1024;
+        // directionalLight.shadow.mapSize.heught = 1024;
+        // directionalLight.shadow.camera.top = directionalLight.shadow.camera.right = 70;
+        // directionalLight.shadow.camera.bottom = directionalLight.shadow.camera.left = -70;
+        // directionalLight.shadow.camera.near =50;
+        // directionalLight.shadow.camera.far = 500;
+        // directionalLight.shadow.radius = 5;
+        // const directionalLightHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
+        // this._scene.add(directionalLightHelper);
+        // // 헬퍼 객체
+        // const helper = new THREE.DirectionalLightHelper(directionalLight, 10); 
+        // this._scene.add(helper);
 
 
-        const ambientLight = new THREE.AmbientLight( 0xffffff, 2);
-        ambientLight.position.set(0, 0, 0);
-        this._scene.add(ambientLight);
+        // const ambientLight = new THREE.AmbientLight( 0xffffff, 2);
+        // ambientLight.position.set(0, 0, 0);
+        // this._scene.add(ambientLight);
          
         // const directionalLight2 = new THREE.DirectionalLight(color, 0.6);
         // directionalLight2.position.set(40, 20, -20 );
@@ -234,7 +232,7 @@ class App{
         //  this._scene.add(cameraHelper);
         //  this._cameraHelper = cameraHelper;
         
-        // const AmbientLight = new THREE.AmbientLight(0x00ff00, 5);        
+        // const AmbientLight = new THREE.AmbientLight(0xffffff, 1);        
         // this._scene.add(AmbientLight);         
         
 
@@ -315,7 +313,7 @@ class App{
     _makePlangeometry()
     {
         const loader = new THREE.TextureLoader();
-        loader.setPath('model/outlet_20220620/');
+        loader.setPath('model/outlet_20220620/checkout/');
         const texture = loader.load('Tile01.png');
 
         texture.wrapS = THREE.RepeatWrapping;
@@ -323,19 +321,22 @@ class App{
         texture.repeat.set( 8, 8);
 
         const geometry = new THREE.PlaneGeometry( 200, 200 );
-        const material = new THREE.MeshPhongMaterial( {color:0x878787, map:texture});//, side: THREE.DoubleSide} );
+        const material = new THREE.MeshStandardMaterial( {color:0x878787, map:texture});//, side: THREE.DoubleSide} );
         const plane = new THREE.Mesh( geometry, material );                
          plane.position.set(0, -0.1, 0);
         plane.rotation.x = -Math.PI /2;
         this._scene.add( plane );
         plane.receiveShadow = true;
 
+        console.log(plane);
+
         this._worldOctree.fromGraphNode(plane);
     }
 
-    _loadingModel()
+    
+    _loadingModel( path, model)
     {
-        new GLTFLoader().load("./model/outlet_20220620/test2.gltf", (gltf) =>{
+        new GLTFLoader().load(path + model, (gltf) =>{
 
             const model = gltf.scene;
             this._scene.add(model);
@@ -347,6 +348,88 @@ class App{
                 }
             });
         });
+    }
+
+    _loadingModel()
+    {
+        
+        new GLTFLoader().load("./model/outlet_20220620/test3/111.gltf", (gltf) =>{
+
+            const model = gltf.scene;
+
+            gltf.scene.traverse(child => {
+                const name = child.name;
+                // console.log(name);
+
+                if( name.indexOf("Omni") != -1){
+                    console.log(child.name);
+                    const helper = new THREE.PointLightHelper(child); 
+                    this._scene.add(helper);
+
+                    // child.visible = false;
+                }
+
+                if( name.indexOf("Tile") != -1 )
+                {
+                    child.material.roughness = 1;
+                    console.log(child);
+                }
+            });
+
+            this._scene.add(gltf.scene);
+
+            model.traverse(child => {
+                if( child instanceof THREE.Mesh)
+                {
+                    const name = child.name;
+                    
+                    //console.log(name);
+                    if( child.name.indexOf("Collider") != -1 ){
+                        
+                        // child.position.set(0,100,0);
+                        child.visible = false;
+                        this._worldOctree.fromGraphNode(child);
+                    }
+
+                    if( child.name.indexOf("Sphere001") != -1 ){
+                        child.position.set(0, 8, 0);
+
+                        //child.visible = false;
+                    }                    
+
+                    
+
+                    child.castShadow=true;
+                }
+            });
+        });
+        
+
+        // new GLTFLoader().load("./model/outlet_20220620/json/scene.gltf", (gltf) =>{
+
+        //     const model = gltf.scene;
+
+        //     gltf.scene.traverse(child => {
+        //         if( child instanceof THREE.Light)
+        //         {
+        //             console.log(child.name);
+        //             //if( child.name.indexOf("Spot001") != -1 ){
+        //               //  const spotHelper = new THREE.SpotLightHelper(child);
+        //                 //this._scene.add(spotHelper);
+        //             //}
+        //             //var direcitonalLight = child;  Editor 에서 뽑은 라이트의 강도를 조절해봄
+        //             //direcitonalLight.intensity = 3;
+        //             const helper = new THREE.DirectionalLightHelper(child, 10); 
+        //             this._scene.add(helper);
+        //         }
+        // });
+
+            
+
+        //     model.position.set( 0, 10 , 0);
+        //     this._scene.add(gltf.scene);
+
+        // });
 
         new GLTFLoader().load("./model/ani/Soldier.glb", (gltf) =>
         {
@@ -356,7 +439,7 @@ class App{
             model.traverse(child => {
                 if( child instanceof THREE.Mesh)
                 {
-                    child.castShadow=true;
+                    child.castShadow=true;                    
                 }
             });
             // 해당 모델이 애니클립이 있으면 클립이름을 콘솔에 출력한다.
@@ -365,7 +448,7 @@ class App{
             const animationsMap = {};
             animationClips.forEach(clip => {
             const name = clip.name;
-            console.log(name);
+            //console.log(name);
             animationsMap[name] = mixer.clipAction(clip); // THREE.AnimationAction 객체로 만들어주기도함.
             });
         
@@ -375,7 +458,7 @@ class App{
             this._currentAnimationAction.play();
 
             const box = (new THREE.Box3).setFromObject(model);
-             model.position.y = 1550;//(box.max.y - box.min.y)/2;
+            //  model.position.y = 1550;//(box.max.y - box.min.y)/2;
 
             const height = box.max.y - box.min.y; // 캐릭터를 감싸는 바운딩 박스.
             const diameter = box.max.z - box.min.z;
@@ -419,16 +502,14 @@ class App{
 
         // });
 
-        // const loader2 = new GLTFLoader().setPath( 'models/gltf/DamagedHelmet/glTF/' );
-        // loader2.load( 'DamagedHelmet.gltf', function ( gltf ) {
-
-
-		// 					scene.add( gltf.scene );
-
-
+        // const loader2 = new GLTFLoader().setPath( 'model/glTF/' );
+        // new GLTFLoader().load( 'model/glTF/DamagedHelmet.gltf', ( gltf ) =>
+        // {
+		// 					this._scene.add( gltf.scene );
+                            
 		// 				} );
         
-        // this._scene.add(gltf.scene);            
+        
         
     }
 
@@ -440,7 +521,7 @@ class App{
     _setupModel()
     {
          this._makeBoxGemetry( 2,1,0);        
-         this._makePlangeometry();
+          this._makePlangeometry();
 
         const scene = this._scene;
 
