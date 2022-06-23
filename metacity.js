@@ -353,7 +353,7 @@ class App{
     _loadingModel()
     {
         
-        new GLTFLoader().load("./model/outlet_20220620/test3/111.gltf", (gltf) =>{
+        new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
 
             const model = gltf.scene;
 
