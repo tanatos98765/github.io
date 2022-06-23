@@ -145,7 +145,9 @@
         132,
         133,
         134,
-        135
+        135,
+        136,
+        137
       ]
     }
   ],
@@ -2323,6 +2325,36 @@
       "name": "Fence006"
     },
     {
+      "mesh": 132,
+      "translation": [
+        8.903785,
+        0.0,
+        -7.193564
+      ],
+      "rotation": [
+        0.0,
+        -0.7071068,
+        0.0,
+        0.7071067
+      ],
+      "name": "Escal01"
+    },
+    {
+      "mesh": 133,
+      "translation": [
+        -11.1641464,
+        0.0,
+        -7.193564
+      ],
+      "rotation": [
+        0.0,
+        -0.7071068,
+        0.0,
+        0.7071067
+      ],
+      "name": "Escal002"
+    },
+    {
       "translation": [
         36.3087769,
         5.82864237,
@@ -4279,6 +4311,34 @@
         }
       ],
       "name": "Fence006"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 561,
+            "NORMAL": 562,
+            "TEXCOORD_0": 563
+          },
+          "indices": 560,
+          "material": 6
+        }
+      ],
+      "name": "Escal01"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 565,
+            "NORMAL": 566,
+            "TEXCOORD_0": 567
+          },
+          "indices": 564,
+          "material": 6
+        }
+      ],
+      "name": "Escal002"
     }
   ],
   "accessors": [
@@ -10077,31 +10137,115 @@
       "count": 280,
       "type": "VEC2",
       "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 207552,
+      "componentType": 5123,
+      "count": 4950,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1399224,
+      "componentType": 5126,
+      "count": 1386,
+      "max": [
+        6.65981531,
+        6.85061455,
+        0.800100148
+      ],
+      "min": [
+        -6.65981531,
+        -0.41392222,
+        -0.800100148
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1415856,
+      "componentType": 5126,
+      "count": 1386,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 466408,
+      "componentType": 5126,
+      "count": 1386,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 217452,
+      "componentType": 5123,
+      "count": 4950,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1432488,
+      "componentType": 5126,
+      "count": 1386,
+      "max": [
+        6.65981531,
+        6.85061455,
+        0.800100148
+      ],
+      "min": [
+        -6.65981531,
+        -0.41392222,
+        -0.800100148
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1449120,
+      "componentType": 5126,
+      "count": 1386,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 477496,
+      "componentType": 5126,
+      "count": 1386,
+      "type": "VEC2",
+      "name": "accessorUVs"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 207552,
+      "byteLength": 227352,
       "name": "bufferViewScalar"
     },
     {
       "buffer": 0,
-      "byteOffset": 207552,
-      "byteLength": 1399224,
+      "byteOffset": 227352,
+      "byteLength": 1465752,
       "byteStride": 12,
       "name": "bufferViewFloatVec3"
     },
     {
       "buffer": 0,
-      "byteOffset": 1606776,
-      "byteLength": 466408,
+      "byteOffset": 1693104,
+      "byteLength": 488584,
       "byteStride": 8,
       "name": "bufferViewFloatVec2"
     },
     {
       "buffer": 0,
-      "byteOffset": 2073184,
+      "byteOffset": 2181688,
       "byteLength": 114112,
       "byteStride": 16,
       "name": "bufferViewFloatVec4"
@@ -10110,7 +10254,7 @@
   "buffers": [
     {
       "uri": "111.bin",
-      "byteLength": 2187296
+      "byteLength": 2295800
     }
   ],
   "materials": [
@@ -10222,6 +10366,27 @@
       "extras": {
         "babylonSeparateCullingPass": false
       }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 16
+        },
+        "metallicRoughnessTexture": {
+          "index": 15
+        }
+      },
+      "normalTexture": {
+        "index": 14
+      },
+      "occlusionTexture": {
+        "index": 15
+      },
+      "doubleSided": true,
+      "name": "Escalator",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
     }
   ],
   "textures": [
@@ -10294,6 +10459,21 @@
       "sampler": 0,
       "source": 13,
       "name": "outlet02_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 14,
+      "name": "Escalator_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 15,
+      "name": "Escalator_RoughnessEscalator_RoughnessEscalator_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 16,
+      "name": "Escalator_Base_color.png"
     }
   ],
   "images": [
@@ -10338,6 +10518,15 @@
     },
     {
       "uri": "outlet02_Base_color.png"
+    },
+    {
+      "uri": "Escalator_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Escalator_RoughnessEscalator_RoughnessEscalator_Metallic.png"
+    },
+    {
+      "uri": "Escalator_Base_color.png"
     }
   ],
   "samplers": [
