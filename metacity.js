@@ -353,56 +353,63 @@ class App{
     _loadingModel()
     {
         
-        new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
-
-            const model = gltf.scene;
-
-            gltf.scene.traverse(child => {
-                const name = child.name;
-                // console.log(name);
-
-                if( name.indexOf("Omni") != -1){
-                    console.log(child.name);
-                    const helper = new THREE.PointLightHelper(child); 
-                    this._scene.add(helper);
-
-                    // child.visible = false;
-                }
-
-                if( name.indexOf("Tile") != -1 )
-                {
-                    child.material.roughness = 1;
-                    console.log(child);
-                }
-            });
-
-            this._scene.add(gltf.scene);
-
-            model.traverse(child => {
-                if( child instanceof THREE.Mesh)
-                {
-                    const name = child.name;
+        for( let j = 0 ; j < 3 ; j++ ){
+            for ( let i = 0 ; i < 3 ; i++){
+                new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
+    
+                    const model = gltf.scene;
+    
                     
-                    //console.log(name);
-                    if( child.name.indexOf("Collider") != -1 ){
-                        
-                        // child.position.set(0,100,0);
-                        child.visible = false;
-                        this._worldOctree.fromGraphNode(child);
-                    }
-
-                    if( child.name.indexOf("Sphere001") != -1 ){
-                        child.position.set(0, 8, 0);
-
-                        //child.visible = false;
-                    }                    
-
-                    
-
-                    child.castShadow=true;
-                }
-            });
-        });
+                    model.position.set( j*100, 0 , i * 100 );
+    
+                    gltf.scene.traverse(child => {
+                        const name = child.name;
+                        // console.log(name);
+        
+                        if( name.indexOf("Omni") != -1){
+                            // console.log(child.name);
+                            const helper = new THREE.PointLightHelper(child); 
+                            this._scene.add(helper);
+        
+                            // child.visible = false;
+                        }
+        
+                        if( name.indexOf("Tile") != -1 )
+                        {
+                            child.material.roughness = 1;
+                            console.log(child);
+                        }
+                    });
+        
+                    this._scene.add(gltf.scene);
+        
+                    model.traverse(child => {
+                        if( child instanceof THREE.Mesh)
+                        {
+                            const name = child.name;
+                            
+                            //console.log(name);
+                            if( child.name.indexOf("Collider") != -1 ){
+                                
+                                // child.position.set(0,100,0);
+                                child.visible = false;
+                                this._worldOctree.fromGraphNode(child);
+                            }
+        
+                            if( child.name.indexOf("Sphere001") != -1 ){
+                                child.position.set(0, 8, 0);
+        
+                                //child.visible = false;
+                            }                    
+        
+                            
+        
+                            child.castShadow=true;
+                        }
+                    });
+                });
+            }
+        }
         
 
         // new GLTFLoader().load("./model/outlet_20220620/json/scene.gltf", (gltf) =>{
