@@ -190,34 +190,34 @@ class App{
     }
     _setupLight()
     {
-        // const color = 0xffffff;
-        // const intensity = 4;
-        // const directionalLight = new THREE.DirectionalLight(color, intensity);
-        // directionalLight.position.set( 5, 148, -160 );
-        // directionalLight.target.position.set(0,0,0);
+        const color = 0xffffff;
+        const intensity = 1;
+        const directionalLight = new THREE.DirectionalLight(color, intensity);
+        directionalLight.position.set( 5, 148, -160 );
+        directionalLight.target.position.set(0,0,0);
         
-        // this._scene.add(directionalLight);
-        // this._scene.add(directionalLight.target);
-        // this._directionalLight = directionalLight;        
+        this._scene.add(directionalLight);
+        this._scene.add(directionalLight.target);
+        this._directionalLight = directionalLight;        
 
-        // directionalLight.castShadow = true;
-        // directionalLight.shadow.mapSize.width = 1024;
-        // directionalLight.shadow.mapSize.heught = 1024;
-        // directionalLight.shadow.camera.top = directionalLight.shadow.camera.right = 70;
-        // directionalLight.shadow.camera.bottom = directionalLight.shadow.camera.left = -70;
-        // directionalLight.shadow.camera.near =50;
-        // directionalLight.shadow.camera.far = 500;
-        // directionalLight.shadow.radius = 5;
-        // const directionalLightHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
-        // this._scene.add(directionalLightHelper);
-        // // 헬퍼 객체
-        // const helper = new THREE.DirectionalLightHelper(directionalLight, 10); 
-        // this._scene.add(helper);
+        directionalLight.castShadow = true;
+        directionalLight.shadow.mapSize.width = 1024;
+        directionalLight.shadow.mapSize.heught = 1024;
+        directionalLight.shadow.camera.top = directionalLight.shadow.camera.right = 70;
+        directionalLight.shadow.camera.bottom = directionalLight.shadow.camera.left = -70;
+        directionalLight.shadow.camera.near =50;
+        directionalLight.shadow.camera.far = 500;
+        directionalLight.shadow.radius = 5;
+        const directionalLightHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
+        this._scene.add(directionalLightHelper);
+        // 헬퍼 객체
+        const helper = new THREE.DirectionalLightHelper(directionalLight, 10); 
+        this._scene.add(helper);
 
 
-        // const ambientLight = new THREE.AmbientLight( 0xffffff, 2);
-        // ambientLight.position.set(0, 0, 0);
-        // this._scene.add(ambientLight);
+        const ambientLight = new THREE.AmbientLight( 0xffffff, 1);
+        ambientLight.position.set(0, 0, 0);
+        this._scene.add(ambientLight);
          
         // const directionalLight2 = new THREE.DirectionalLight(color, 0.6);
         // directionalLight2.position.set(40, 20, -20 );

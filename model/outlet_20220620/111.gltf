@@ -155,43 +155,7 @@
         142,
         143,
         144,
-        145,
-        146,
-        147,
-        148,
-        149,
-        150,
-        151,
-        152,
-        153,
-        154,
-        155,
-        156,
-        157,
-        158,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166,
-        167,
-        168,
-        169,
-        170,
-        171,
-        172,
-        173,
-        174,
-        175,
-        176,
-        177,
-        178,
-        179,
-        180,
-        181
+        145
       ]
     }
   ],
@@ -2373,24 +2337,96 @@
       "translation": [
         -2.19481325,
         20.4571018,
-        2.361985
+        53.5241165
       ],
       "name": "Sphere001"
     },
     {
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
+      "mesh": 133,
+      "translation": [
+        -52.72389,
+        20.4571018,
+        41.66729
       ],
-      "name": "Sky001"
+      "name": "Sphere002"
+    },
+    {
+      "mesh": 134,
+      "translation": [
+        -78.12278,
+        20.4571018,
+        4.19579649
+      ],
+      "name": "Sphere003"
+    },
+    {
+      "mesh": 135,
+      "translation": [
+        -74.5819244,
+        20.4571018,
+        -46.560154
+      ],
+      "name": "Sphere004"
+    },
+    {
+      "mesh": 136,
+      "translation": [
+        73.42694,
+        20.4571018,
+        -44.508625
+      ],
+      "name": "Sphere005"
+    },
+    {
+      "mesh": 137,
+      "translation": [
+        74.91427,
+        20.4571018,
+        8.820349
+      ],
+      "name": "Sphere006"
+    },
+    {
+      "mesh": 138,
+      "translation": [
+        50.0214767,
+        20.4571018,
+        43.8543625
+      ],
+      "name": "Sphere007"
+    },
+    {
+      "mesh": 139,
+      "translation": [
+        34.243927,
+        20.4571018,
+        -44.508625
+      ],
+      "name": "Sphere008"
+    },
+    {
+      "mesh": 140,
+      "translation": [
+        -4.93908453,
+        20.4571018,
+        -44.508625
+      ],
+      "name": "Sphere009"
+    },
+    {
+      "mesh": 141,
+      "translation": [
+        -44.122097,
+        20.4571018,
+        -44.508625
+      ],
+      "name": "Sphere010"
     },
     {
       "translation": [
         36.3087769,
         5.82864237,
-        18.5582771
+        0.043837633
       ],
       "rotation": [
         -0.707106769,
@@ -2409,7 +2445,7 @@
       "translation": [
         12.137208,
         5.82864237,
-        18.5582771
+        0.043837633
       ],
       "rotation": [
         -0.707106769,
@@ -2428,7 +2464,7 @@
       "translation": [
         -12.0343628,
         5.82864237,
-        18.5582771
+        0.043837633
       ],
       "rotation": [
         -0.707106769,
@@ -2447,7 +2483,7 @@
       "translation": [
         -36.2059326,
         5.82864237,
-        18.5582771
+        0.043837633
       ],
       "rotation": [
         -0.707106769,
@@ -2459,842 +2495,6 @@
       "extensions": {
         "KHR_lights_punctual": {
           "light": 3
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        5.82864237,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni006",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 4
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        5.82864237,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni007",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 5
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        5.82864237,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni008",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 6
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        5.82864237,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni009",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 7
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        5.82864237,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni010",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 8
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        5.82864237,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni011",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 9
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        5.82864237,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni012",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 10
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        5.82864237,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni013",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 11
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        5.82864237,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni014",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 12
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        5.82864237,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni015",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 13
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        5.82864237,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni016",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 14
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        5.82864237,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni017",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 15
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        13.7667751,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni018",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 16
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        13.7667751,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni019",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 17
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        13.7667751,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni020",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 18
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        13.7667751,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni021",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 19
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        13.7667751,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni022",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 20
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        13.7667751,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni023",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 21
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        13.7667751,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni024",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 22
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        13.7667751,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni025",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 23
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        13.7667751,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni026",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 24
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        13.7667751,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni027",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 25
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        13.7667751,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni028",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 26
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        13.7667751,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni029",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 27
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        13.7667751,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni030",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 28
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        13.7667751,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni031",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 29
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        13.7667751,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni032",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 30
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        13.7667751,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni033",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 31
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        21.7049084,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni034",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 32
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        21.7049084,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni035",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 33
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        21.7049084,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni036",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 34
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        21.7049084,
-        18.5582771
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni037",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 35
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        21.7049084,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni038",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 36
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        21.7049084,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni039",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 37
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        21.7049084,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni040",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 38
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        21.7049084,
-        6.600391
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni041",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 39
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        21.7049084,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni042",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 40
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        21.7049084,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni043",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 41
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        21.7049084,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni044",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 42
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        21.7049084,
-        -5.357495
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni045",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 43
-        }
-      }
-    },
-    {
-      "translation": [
-        36.3087769,
-        21.7049084,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni046",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 44
-        }
-      }
-    },
-    {
-      "translation": [
-        12.137208,
-        21.7049084,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni047",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 45
-        }
-      }
-    },
-    {
-      "translation": [
-        -12.0343628,
-        21.7049084,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni048",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 46
-        }
-      }
-    },
-    {
-      "translation": [
-        -36.2059326,
-        21.7049084,
-        -17.31538
-      ],
-      "rotation": [
-        -0.707106769,
-        0.0,
-        0.0,
-        0.707106769
-      ],
-      "name": "Omni049",
-      "extensions": {
-        "KHR_lights_punctual": {
-          "light": 47
         }
       }
     }
@@ -3309,7 +2509,7 @@
             "TEXCOORD_0": 3
           },
           "indices": 0,
-          "material": 3
+          "material": 1
         }
       ],
       "name": "Outlet3"
@@ -3323,7 +2523,7 @@
             "TEXCOORD_0": 7
           },
           "indices": 4,
-          "material": 4
+          "material": 2
         }
       ],
       "name": "Tile01"
@@ -3337,7 +2537,7 @@
             "TEXCOORD_0": 11
           },
           "indices": 8,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "Shop01"
@@ -3351,7 +2551,7 @@
             "TEXCOORD_0": 15
           },
           "indices": 12,
-          "material": 5
+          "material": 4
         }
       ],
       "name": "Outlet1"
@@ -3365,7 +2565,7 @@
             "TEXCOORD_0": 19
           },
           "indices": 16,
-          "material": 6
+          "material": 5
         }
       ],
       "name": "Outlet2"
@@ -3379,7 +2579,7 @@
             "TEXCOORD_0": 23
           },
           "indices": 20,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "Garden03"
@@ -3393,7 +2593,7 @@
             "TEXCOORD_0": 27
           },
           "indices": 24,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "Atm001"
@@ -3407,7 +2607,7 @@
             "TEXCOORD_0": 31
           },
           "indices": 28,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "stone062"
@@ -3421,7 +2621,7 @@
             "TEXCOORD_0": 35
           },
           "indices": 32,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "Chair001"
@@ -3436,7 +2636,7 @@
             "TEXCOORD_0": 40
           },
           "indices": 36,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "PlasticChair001"
@@ -3451,7 +2651,7 @@
             "TEXCOORD_0": 45
           },
           "indices": 41,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "umbrella001"
@@ -3465,8 +2665,13 @@
             "TEXCOORD_0": 49
           },
           "indices": 46,
-          "material": 2
-        },
+          "material": 3
+        }
+      ],
+      "name": "Lamp001"
+    },
+    {
+      "primitives": [
         {
           "attributes": {
             "POSITION": 51,
@@ -3474,10 +2679,10 @@
             "TEXCOORD_0": 53
           },
           "indices": 50,
-          "material": 1
+          "material": 3
         }
       ],
-      "name": "Lamp001"
+      "name": "DirectionBoard001"
     },
     {
       "primitives": [
@@ -3488,10 +2693,10 @@
             "TEXCOORD_0": 57
           },
           "indices": 54,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "DirectionBoard001"
+      "name": "stone001"
     },
     {
       "primitives": [
@@ -3502,10 +2707,10 @@
             "TEXCOORD_0": 61
           },
           "indices": 58,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone001"
+      "name": "stone002"
     },
     {
       "primitives": [
@@ -3516,10 +2721,10 @@
             "TEXCOORD_0": 65
           },
           "indices": 62,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone002"
+      "name": "stone003"
     },
     {
       "primitives": [
@@ -3530,10 +2735,10 @@
             "TEXCOORD_0": 69
           },
           "indices": 66,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone003"
+      "name": "stone004"
     },
     {
       "primitives": [
@@ -3544,10 +2749,10 @@
             "TEXCOORD_0": 73
           },
           "indices": 70,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone004"
+      "name": "stone005"
     },
     {
       "primitives": [
@@ -3558,10 +2763,10 @@
             "TEXCOORD_0": 77
           },
           "indices": 74,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone005"
+      "name": "stone006"
     },
     {
       "primitives": [
@@ -3572,21 +2777,7 @@
             "TEXCOORD_0": 81
           },
           "indices": 78,
-          "material": 2
-        }
-      ],
-      "name": "stone006"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 83,
-            "NORMAL": 84,
-            "TEXCOORD_0": 85
-          },
-          "indices": 82,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "stone007"
@@ -3595,13 +2786,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 87,
-            "NORMAL": 88,
-            "COLOR_0": 89,
-            "TEXCOORD_0": 90
+            "POSITION": 83,
+            "NORMAL": 84,
+            "COLOR_0": 85,
+            "TEXCOORD_0": 86
           },
-          "indices": 86,
-          "material": 2
+          "indices": 82,
+          "material": 3
         }
       ],
       "name": "Garden01"
@@ -3610,16 +2801,30 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 92,
-            "NORMAL": 93,
-            "COLOR_0": 94,
-            "TEXCOORD_0": 95
+            "POSITION": 88,
+            "NORMAL": 89,
+            "COLOR_0": 90,
+            "TEXCOORD_0": 91
           },
-          "indices": 91,
-          "material": 2
+          "indices": 87,
+          "material": 3
         }
       ],
       "name": "Garden02"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 93,
+            "NORMAL": 94,
+            "TEXCOORD_0": 95
+          },
+          "indices": 92,
+          "material": 5
+        }
+      ],
+      "name": "Outlet4"
     },
     {
       "primitives": [
@@ -3630,21 +2835,7 @@
             "TEXCOORD_0": 99
           },
           "indices": 96,
-          "material": 6
-        }
-      ],
-      "name": "Outlet4"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 101,
-            "NORMAL": 102,
-            "TEXCOORD_0": 103
-          },
-          "indices": 100,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "Shop02"
@@ -3653,13 +2844,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 105,
-            "NORMAL": 106,
-            "COLOR_0": 107,
-            "TEXCOORD_0": 108
+            "POSITION": 101,
+            "NORMAL": 102,
+            "COLOR_0": 103,
+            "TEXCOORD_0": 104
           },
-          "indices": 104,
-          "material": 2
+          "indices": 100,
+          "material": 3
         }
       ],
       "name": "Garden004"
@@ -3668,16 +2859,30 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 110,
-            "NORMAL": 111,
-            "COLOR_0": 112,
-            "TEXCOORD_0": 113
+            "POSITION": 106,
+            "NORMAL": 107,
+            "COLOR_0": 108,
+            "TEXCOORD_0": 109
           },
-          "indices": 109,
-          "material": 2
+          "indices": 105,
+          "material": 3
         }
       ],
       "name": "Garden005"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 111,
+            "NORMAL": 112,
+            "TEXCOORD_0": 113
+          },
+          "indices": 110,
+          "material": 3
+        }
+      ],
+      "name": "stone008"
     },
     {
       "primitives": [
@@ -3688,10 +2893,10 @@
             "TEXCOORD_0": 117
           },
           "indices": 114,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone008"
+      "name": "stone009"
     },
     {
       "primitives": [
@@ -3702,10 +2907,10 @@
             "TEXCOORD_0": 121
           },
           "indices": 118,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone009"
+      "name": "stone010"
     },
     {
       "primitives": [
@@ -3716,10 +2921,10 @@
             "TEXCOORD_0": 125
           },
           "indices": 122,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone010"
+      "name": "stone011"
     },
     {
       "primitives": [
@@ -3730,10 +2935,10 @@
             "TEXCOORD_0": 129
           },
           "indices": 126,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone011"
+      "name": "stone012"
     },
     {
       "primitives": [
@@ -3744,10 +2949,10 @@
             "TEXCOORD_0": 133
           },
           "indices": 130,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone012"
+      "name": "stone013"
     },
     {
       "primitives": [
@@ -3758,10 +2963,10 @@
             "TEXCOORD_0": 137
           },
           "indices": 134,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone013"
+      "name": "GardenFence01"
     },
     {
       "primitives": [
@@ -3772,10 +2977,10 @@
             "TEXCOORD_0": 141
           },
           "indices": 138,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "GardenFence01"
+      "name": "GardenFence02"
     },
     {
       "primitives": [
@@ -3786,10 +2991,10 @@
             "TEXCOORD_0": 145
           },
           "indices": 142,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "GardenFence02"
+      "name": "GardenFence03"
     },
     {
       "primitives": [
@@ -3800,10 +3005,10 @@
             "TEXCOORD_0": 149
           },
           "indices": 146,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "GardenFence03"
+      "name": "stone014"
     },
     {
       "primitives": [
@@ -3814,10 +3019,10 @@
             "TEXCOORD_0": 153
           },
           "indices": 150,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone014"
+      "name": "stone015"
     },
     {
       "primitives": [
@@ -3828,10 +3033,10 @@
             "TEXCOORD_0": 157
           },
           "indices": 154,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone015"
+      "name": "stone016"
     },
     {
       "primitives": [
@@ -3842,10 +3047,10 @@
             "TEXCOORD_0": 161
           },
           "indices": 158,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone016"
+      "name": "stone017"
     },
     {
       "primitives": [
@@ -3856,10 +3061,10 @@
             "TEXCOORD_0": 165
           },
           "indices": 162,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone017"
+      "name": "stone018"
     },
     {
       "primitives": [
@@ -3870,10 +3075,10 @@
             "TEXCOORD_0": 169
           },
           "indices": 166,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone018"
+      "name": "stone019"
     },
     {
       "primitives": [
@@ -3884,10 +3089,10 @@
             "TEXCOORD_0": 173
           },
           "indices": 170,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone019"
+      "name": "stone020"
     },
     {
       "primitives": [
@@ -3898,10 +3103,10 @@
             "TEXCOORD_0": 177
           },
           "indices": 174,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone020"
+      "name": "stone021"
     },
     {
       "primitives": [
@@ -3912,10 +3117,10 @@
             "TEXCOORD_0": 181
           },
           "indices": 178,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone021"
+      "name": "stone022"
     },
     {
       "primitives": [
@@ -3926,10 +3131,10 @@
             "TEXCOORD_0": 185
           },
           "indices": 182,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone022"
+      "name": "stone023"
     },
     {
       "primitives": [
@@ -3940,10 +3145,10 @@
             "TEXCOORD_0": 189
           },
           "indices": 186,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone023"
+      "name": "stone024"
     },
     {
       "primitives": [
@@ -3954,10 +3159,10 @@
             "TEXCOORD_0": 193
           },
           "indices": 190,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone024"
+      "name": "stone025"
     },
     {
       "primitives": [
@@ -3968,10 +3173,10 @@
             "TEXCOORD_0": 197
           },
           "indices": 194,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone025"
+      "name": "stone026"
     },
     {
       "primitives": [
@@ -3982,10 +3187,10 @@
             "TEXCOORD_0": 201
           },
           "indices": 198,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone026"
+      "name": "stone027"
     },
     {
       "primitives": [
@@ -3996,10 +3201,10 @@
             "TEXCOORD_0": 205
           },
           "indices": 202,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone027"
+      "name": "stone028"
     },
     {
       "primitives": [
@@ -4010,10 +3215,10 @@
             "TEXCOORD_0": 209
           },
           "indices": 206,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone028"
+      "name": "stone029"
     },
     {
       "primitives": [
@@ -4024,10 +3229,10 @@
             "TEXCOORD_0": 213
           },
           "indices": 210,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone029"
+      "name": "stone030"
     },
     {
       "primitives": [
@@ -4038,10 +3243,10 @@
             "TEXCOORD_0": 217
           },
           "indices": 214,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone030"
+      "name": "stone031"
     },
     {
       "primitives": [
@@ -4052,10 +3257,10 @@
             "TEXCOORD_0": 221
           },
           "indices": 218,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone031"
+      "name": "stone032"
     },
     {
       "primitives": [
@@ -4066,10 +3271,10 @@
             "TEXCOORD_0": 225
           },
           "indices": 222,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone032"
+      "name": "stone033"
     },
     {
       "primitives": [
@@ -4080,10 +3285,10 @@
             "TEXCOORD_0": 229
           },
           "indices": 226,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone033"
+      "name": "stone034"
     },
     {
       "primitives": [
@@ -4094,10 +3299,10 @@
             "TEXCOORD_0": 233
           },
           "indices": 230,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone034"
+      "name": "stone035"
     },
     {
       "primitives": [
@@ -4108,10 +3313,10 @@
             "TEXCOORD_0": 237
           },
           "indices": 234,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone035"
+      "name": "stone036"
     },
     {
       "primitives": [
@@ -4122,10 +3327,10 @@
             "TEXCOORD_0": 241
           },
           "indices": 238,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone036"
+      "name": "stone037"
     },
     {
       "primitives": [
@@ -4136,10 +3341,10 @@
             "TEXCOORD_0": 245
           },
           "indices": 242,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone037"
+      "name": "stone038"
     },
     {
       "primitives": [
@@ -4150,10 +3355,10 @@
             "TEXCOORD_0": 249
           },
           "indices": 246,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone038"
+      "name": "stone039"
     },
     {
       "primitives": [
@@ -4164,10 +3369,10 @@
             "TEXCOORD_0": 253
           },
           "indices": 250,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone039"
+      "name": "stone040"
     },
     {
       "primitives": [
@@ -4178,10 +3383,10 @@
             "TEXCOORD_0": 257
           },
           "indices": 254,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone040"
+      "name": "stone041"
     },
     {
       "primitives": [
@@ -4192,10 +3397,10 @@
             "TEXCOORD_0": 261
           },
           "indices": 258,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone041"
+      "name": "stone042"
     },
     {
       "primitives": [
@@ -4206,10 +3411,10 @@
             "TEXCOORD_0": 265
           },
           "indices": 262,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone042"
+      "name": "stone043"
     },
     {
       "primitives": [
@@ -4220,10 +3425,10 @@
             "TEXCOORD_0": 269
           },
           "indices": 266,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone043"
+      "name": "stone044"
     },
     {
       "primitives": [
@@ -4234,10 +3439,10 @@
             "TEXCOORD_0": 273
           },
           "indices": 270,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone044"
+      "name": "stone045"
     },
     {
       "primitives": [
@@ -4248,10 +3453,10 @@
             "TEXCOORD_0": 277
           },
           "indices": 274,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone045"
+      "name": "stone046"
     },
     {
       "primitives": [
@@ -4262,10 +3467,10 @@
             "TEXCOORD_0": 281
           },
           "indices": 278,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone046"
+      "name": "stone047"
     },
     {
       "primitives": [
@@ -4276,10 +3481,10 @@
             "TEXCOORD_0": 285
           },
           "indices": 282,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone047"
+      "name": "stone048"
     },
     {
       "primitives": [
@@ -4290,10 +3495,10 @@
             "TEXCOORD_0": 289
           },
           "indices": 286,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone048"
+      "name": "Chair002"
     },
     {
       "primitives": [
@@ -4304,21 +3509,7 @@
             "TEXCOORD_0": 293
           },
           "indices": 290,
-          "material": 2
-        }
-      ],
-      "name": "Chair002"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 295,
-            "NORMAL": 296,
-            "TEXCOORD_0": 297
-          },
-          "indices": 294,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "Chair003"
@@ -4327,13 +3518,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 299,
-            "NORMAL": 300,
-            "COLOR_0": 301,
-            "TEXCOORD_0": 302
+            "POSITION": 295,
+            "NORMAL": 296,
+            "COLOR_0": 297,
+            "TEXCOORD_0": 298
           },
-          "indices": 298,
-          "material": 2
+          "indices": 294,
+          "material": 3
         }
       ],
       "name": "umbrella002"
@@ -4342,13 +3533,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 304,
-            "NORMAL": 305,
-            "COLOR_0": 306,
-            "TEXCOORD_0": 307
+            "POSITION": 300,
+            "NORMAL": 301,
+            "COLOR_0": 302,
+            "TEXCOORD_0": 303
           },
-          "indices": 303,
-          "material": 2
+          "indices": 299,
+          "material": 3
         }
       ],
       "name": "umbrella003"
@@ -4357,12 +3548,12 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 309,
-            "NORMAL": 310,
-            "TEXCOORD_0": 311
+            "POSITION": 305,
+            "NORMAL": 306,
+            "TEXCOORD_0": 307
           },
-          "indices": 308,
-          "material": 2
+          "indices": 304,
+          "material": 3
         }
       ],
       "name": "Pannel002"
@@ -4371,13 +3562,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 313,
-            "NORMAL": 314,
-            "COLOR_0": 315,
-            "TEXCOORD_0": 316
+            "POSITION": 309,
+            "NORMAL": 310,
+            "COLOR_0": 311,
+            "TEXCOORD_0": 312
           },
-          "indices": 312,
-          "material": 2
+          "indices": 308,
+          "material": 3
         }
       ],
       "name": "umbrella004"
@@ -4386,16 +3577,30 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 318,
-            "NORMAL": 319,
-            "COLOR_0": 320,
-            "TEXCOORD_0": 321
+            "POSITION": 314,
+            "NORMAL": 315,
+            "COLOR_0": 316,
+            "TEXCOORD_0": 317
           },
-          "indices": 317,
-          "material": 2
+          "indices": 313,
+          "material": 3
         }
       ],
       "name": "umbrella005"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 319,
+            "NORMAL": 320,
+            "TEXCOORD_0": 321
+          },
+          "indices": 318,
+          "material": 3
+        }
+      ],
+      "name": "stone049"
     },
     {
       "primitives": [
@@ -4406,10 +3611,10 @@
             "TEXCOORD_0": 325
           },
           "indices": 322,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone049"
+      "name": "stone050"
     },
     {
       "primitives": [
@@ -4420,10 +3625,10 @@
             "TEXCOORD_0": 329
           },
           "indices": 326,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone050"
+      "name": "stone051"
     },
     {
       "primitives": [
@@ -4434,10 +3639,10 @@
             "TEXCOORD_0": 333
           },
           "indices": 330,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone051"
+      "name": "stone052"
     },
     {
       "primitives": [
@@ -4448,10 +3653,10 @@
             "TEXCOORD_0": 337
           },
           "indices": 334,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone052"
+      "name": "stone053"
     },
     {
       "primitives": [
@@ -4462,10 +3667,10 @@
             "TEXCOORD_0": 341
           },
           "indices": 338,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone053"
+      "name": "stone054"
     },
     {
       "primitives": [
@@ -4476,10 +3681,10 @@
             "TEXCOORD_0": 345
           },
           "indices": 342,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone054"
+      "name": "stone055"
     },
     {
       "primitives": [
@@ -4490,10 +3695,10 @@
             "TEXCOORD_0": 349
           },
           "indices": 346,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone055"
+      "name": "stone056"
     },
     {
       "primitives": [
@@ -4504,10 +3709,10 @@
             "TEXCOORD_0": 353
           },
           "indices": 350,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone056"
+      "name": "stone057"
     },
     {
       "primitives": [
@@ -4518,10 +3723,10 @@
             "TEXCOORD_0": 357
           },
           "indices": 354,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone057"
+      "name": "stone058"
     },
     {
       "primitives": [
@@ -4532,10 +3737,10 @@
             "TEXCOORD_0": 361
           },
           "indices": 358,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone058"
+      "name": "stone059"
     },
     {
       "primitives": [
@@ -4546,10 +3751,10 @@
             "TEXCOORD_0": 365
           },
           "indices": 362,
-          "material": 2
+          "material": 3
         }
       ],
-      "name": "stone059"
+      "name": "StreetLight004"
     },
     {
       "primitives": [
@@ -4560,8 +3765,13 @@
             "TEXCOORD_0": 369
           },
           "indices": 366,
-          "material": 2
-        },
+          "material": 3
+        }
+      ],
+      "name": "StreetLight006"
+    },
+    {
+      "primitives": [
         {
           "attributes": {
             "POSITION": 371,
@@ -4569,10 +3779,10 @@
             "TEXCOORD_0": 373
           },
           "indices": 370,
-          "material": 1
+          "material": 3
         }
       ],
-      "name": "StreetLight004"
+      "name": "StreetLight015"
     },
     {
       "primitives": [
@@ -4583,8 +3793,13 @@
             "TEXCOORD_0": 377
           },
           "indices": 374,
-          "material": 2
-        },
+          "material": 3
+        }
+      ],
+      "name": "StreetLight016"
+    },
+    {
+      "primitives": [
         {
           "attributes": {
             "POSITION": 379,
@@ -4592,10 +3807,10 @@
             "TEXCOORD_0": 381
           },
           "indices": 378,
-          "material": 1
+          "material": 3
         }
       ],
-      "name": "StreetLight006"
+      "name": "StreetLight018"
     },
     {
       "primitives": [
@@ -4606,76 +3821,7 @@
             "TEXCOORD_0": 385
           },
           "indices": 382,
-          "material": 2
-        },
-        {
-          "attributes": {
-            "POSITION": 387,
-            "NORMAL": 388,
-            "TEXCOORD_0": 389
-          },
-          "indices": 386,
-          "material": 1
-        }
-      ],
-      "name": "StreetLight015"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 391,
-            "NORMAL": 392,
-            "TEXCOORD_0": 393
-          },
-          "indices": 390,
-          "material": 2
-        },
-        {
-          "attributes": {
-            "POSITION": 395,
-            "NORMAL": 396,
-            "TEXCOORD_0": 397
-          },
-          "indices": 394,
-          "material": 1
-        }
-      ],
-      "name": "StreetLight016"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 399,
-            "NORMAL": 400,
-            "TEXCOORD_0": 401
-          },
-          "indices": 398,
-          "material": 2
-        },
-        {
-          "attributes": {
-            "POSITION": 403,
-            "NORMAL": 404,
-            "TEXCOORD_0": 405
-          },
-          "indices": 402,
-          "material": 1
-        }
-      ],
-      "name": "StreetLight018"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 407,
-            "NORMAL": 408,
-            "TEXCOORD_0": 409
-          },
-          "indices": 406,
-          "material": 2
+          "material": 3
         }
       ],
       "name": "stone060"
@@ -4684,12 +3830,12 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 411,
-            "NORMAL": 412,
-            "TEXCOORD_0": 413
+            "POSITION": 387,
+            "NORMAL": 388,
+            "TEXCOORD_0": 389
           },
-          "indices": 410,
-          "material": 2
+          "indices": 386,
+          "material": 3
         }
       ],
       "name": "stone061"
@@ -4698,13 +3844,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 415,
-            "NORMAL": 416,
-            "COLOR_0": 417,
-            "TEXCOORD_0": 418
+            "POSITION": 391,
+            "NORMAL": 392,
+            "COLOR_0": 393,
+            "TEXCOORD_0": 394
           },
-          "indices": 414,
-          "material": 2
+          "indices": 390,
+          "material": 3
         }
       ],
       "name": "PlasticChair002"
@@ -4713,13 +3859,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 420,
-            "NORMAL": 421,
-            "COLOR_0": 422,
-            "TEXCOORD_0": 423
+            "POSITION": 396,
+            "NORMAL": 397,
+            "COLOR_0": 398,
+            "TEXCOORD_0": 399
           },
-          "indices": 419,
-          "material": 2
+          "indices": 395,
+          "material": 3
         }
       ],
       "name": "PlasticChair003"
@@ -4728,13 +3874,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 425,
-            "NORMAL": 426,
-            "COLOR_0": 427,
-            "TEXCOORD_0": 428
+            "POSITION": 401,
+            "NORMAL": 402,
+            "COLOR_0": 403,
+            "TEXCOORD_0": 404
           },
-          "indices": 424,
-          "material": 2
+          "indices": 400,
+          "material": 3
         }
       ],
       "name": "PlasticChair004"
@@ -4743,13 +3889,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 430,
-            "NORMAL": 431,
-            "COLOR_0": 432,
-            "TEXCOORD_0": 433
+            "POSITION": 406,
+            "NORMAL": 407,
+            "COLOR_0": 408,
+            "TEXCOORD_0": 409
           },
-          "indices": 429,
-          "material": 2
+          "indices": 405,
+          "material": 3
         }
       ],
       "name": "PlasticChair005"
@@ -4758,13 +3904,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 435,
-            "NORMAL": 436,
-            "COLOR_0": 437,
-            "TEXCOORD_0": 438
+            "POSITION": 411,
+            "NORMAL": 412,
+            "COLOR_0": 413,
+            "TEXCOORD_0": 414
           },
-          "indices": 434,
-          "material": 2
+          "indices": 410,
+          "material": 3
         }
       ],
       "name": "PlasticChair006"
@@ -4773,13 +3919,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 440,
-            "NORMAL": 441,
-            "COLOR_0": 442,
-            "TEXCOORD_0": 443
+            "POSITION": 416,
+            "NORMAL": 417,
+            "COLOR_0": 418,
+            "TEXCOORD_0": 419
           },
-          "indices": 439,
-          "material": 2
+          "indices": 415,
+          "material": 3
         }
       ],
       "name": "PlasticChair007"
@@ -4788,13 +3934,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 445,
-            "NORMAL": 446,
-            "COLOR_0": 447,
-            "TEXCOORD_0": 448
+            "POSITION": 421,
+            "NORMAL": 422,
+            "COLOR_0": 423,
+            "TEXCOORD_0": 424
           },
-          "indices": 444,
-          "material": 2
+          "indices": 420,
+          "material": 3
         }
       ],
       "name": "PlasticChair008"
@@ -4803,13 +3949,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 450,
-            "NORMAL": 451,
-            "COLOR_0": 452,
-            "TEXCOORD_0": 453
+            "POSITION": 426,
+            "NORMAL": 427,
+            "COLOR_0": 428,
+            "TEXCOORD_0": 429
           },
-          "indices": 449,
-          "material": 2
+          "indices": 425,
+          "material": 3
         }
       ],
       "name": "PlasticChair009"
@@ -4818,13 +3964,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 455,
-            "NORMAL": 456,
-            "COLOR_0": 457,
-            "TEXCOORD_0": 458
+            "POSITION": 431,
+            "NORMAL": 432,
+            "COLOR_0": 433,
+            "TEXCOORD_0": 434
           },
-          "indices": 454,
-          "material": 2
+          "indices": 430,
+          "material": 3
         }
       ],
       "name": "PlasticChair010"
@@ -4833,13 +3979,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 460,
-            "NORMAL": 461,
-            "COLOR_0": 462,
-            "TEXCOORD_0": 463
+            "POSITION": 436,
+            "NORMAL": 437,
+            "COLOR_0": 438,
+            "TEXCOORD_0": 439
           },
-          "indices": 459,
-          "material": 2
+          "indices": 435,
+          "material": 3
         }
       ],
       "name": "PlasticChair011"
@@ -4848,13 +3994,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 465,
-            "NORMAL": 466,
-            "COLOR_0": 467,
-            "TEXCOORD_0": 468
+            "POSITION": 441,
+            "NORMAL": 442,
+            "COLOR_0": 443,
+            "TEXCOORD_0": 444
           },
-          "indices": 464,
-          "material": 2
+          "indices": 440,
+          "material": 3
         }
       ],
       "name": "PlasticChair012"
@@ -4863,13 +4009,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 470,
-            "NORMAL": 471,
-            "COLOR_0": 472,
-            "TEXCOORD_0": 473
+            "POSITION": 446,
+            "NORMAL": 447,
+            "COLOR_0": 448,
+            "TEXCOORD_0": 449
           },
-          "indices": 469,
-          "material": 2
+          "indices": 445,
+          "material": 3
         }
       ],
       "name": "PlasticChair013"
@@ -4878,13 +4024,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 475,
-            "NORMAL": 476,
-            "COLOR_0": 477,
-            "TEXCOORD_0": 478
+            "POSITION": 451,
+            "NORMAL": 452,
+            "COLOR_0": 453,
+            "TEXCOORD_0": 454
           },
-          "indices": 474,
-          "material": 2
+          "indices": 450,
+          "material": 3
         }
       ],
       "name": "PlasticChair014"
@@ -4893,13 +4039,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 480,
-            "NORMAL": 481,
-            "COLOR_0": 482,
-            "TEXCOORD_0": 483
+            "POSITION": 456,
+            "NORMAL": 457,
+            "COLOR_0": 458,
+            "TEXCOORD_0": 459
           },
-          "indices": 479,
-          "material": 2
+          "indices": 455,
+          "material": 3
         }
       ],
       "name": "PlasticChair015"
@@ -4908,13 +4054,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 485,
-            "NORMAL": 486,
-            "COLOR_0": 487,
-            "TEXCOORD_0": 488
+            "POSITION": 461,
+            "NORMAL": 462,
+            "COLOR_0": 463,
+            "TEXCOORD_0": 464
           },
-          "indices": 484,
-          "material": 2
+          "indices": 460,
+          "material": 3
         }
       ],
       "name": "PlasticChair016"
@@ -4923,13 +4069,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 490,
-            "NORMAL": 491,
-            "COLOR_0": 492,
-            "TEXCOORD_0": 493
+            "POSITION": 466,
+            "NORMAL": 467,
+            "COLOR_0": 468,
+            "TEXCOORD_0": 469
           },
-          "indices": 489,
-          "material": 2
+          "indices": 465,
+          "material": 3
         }
       ],
       "name": "PlasticChair017"
@@ -4938,13 +4084,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 495,
-            "NORMAL": 496,
-            "COLOR_0": 497,
-            "TEXCOORD_0": 498
+            "POSITION": 471,
+            "NORMAL": 472,
+            "COLOR_0": 473,
+            "TEXCOORD_0": 474
           },
-          "indices": 494,
-          "material": 2
+          "indices": 470,
+          "material": 3
         }
       ],
       "name": "PlasticChair018"
@@ -4953,13 +4099,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 500,
-            "NORMAL": 501,
-            "COLOR_0": 502,
-            "TEXCOORD_0": 503
+            "POSITION": 476,
+            "NORMAL": 477,
+            "COLOR_0": 478,
+            "TEXCOORD_0": 479
           },
-          "indices": 499,
-          "material": 2
+          "indices": 475,
+          "material": 3
         }
       ],
       "name": "PlasticChair019"
@@ -4968,16 +4114,100 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 505,
-            "NORMAL": 506,
-            "COLOR_0": 507,
-            "TEXCOORD_0": 508
+            "POSITION": 481,
+            "NORMAL": 482,
+            "COLOR_0": 483,
+            "TEXCOORD_0": 484
           },
-          "indices": 504,
-          "material": 2
+          "indices": 480,
+          "material": 3
         }
       ],
       "name": "PlasticChair020"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 486,
+            "NORMAL": 487,
+            "TEXCOORD_0": 488
+          },
+          "indices": 485,
+          "material": 3
+        }
+      ],
+      "name": "Fence001"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 490,
+            "NORMAL": 491,
+            "TEXCOORD_0": 492
+          },
+          "indices": 489,
+          "material": 3
+        }
+      ],
+      "name": "Fence002"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 494,
+            "NORMAL": 495,
+            "TEXCOORD_0": 496
+          },
+          "indices": 493,
+          "material": 3
+        }
+      ],
+      "name": "Fence003"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 498,
+            "NORMAL": 499,
+            "TEXCOORD_0": 500
+          },
+          "indices": 497,
+          "material": 3
+        }
+      ],
+      "name": "DirectionBoard002"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 502,
+            "NORMAL": 503,
+            "TEXCOORD_0": 504
+          },
+          "indices": 501,
+          "material": 3
+        }
+      ],
+      "name": "DirectionBoard003"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 506,
+            "NORMAL": 507,
+            "TEXCOORD_0": 508
+          },
+          "indices": 505,
+          "material": 4
+        }
+      ],
+      "name": "Wall01"
     },
     {
       "primitives": [
@@ -4988,8 +4218,13 @@
             "TEXCOORD_0": 512
           },
           "indices": 509,
-          "material": 2
-        },
+          "material": 4
+        }
+      ],
+      "name": "Wall02"
+    },
+    {
+      "primitives": [
         {
           "attributes": {
             "POSITION": 514,
@@ -4997,10 +4232,10 @@
             "TEXCOORD_0": 516
           },
           "indices": 513,
-          "material": 1
+          "material": 0
         }
       ],
-      "name": "Fence001"
+      "name": "Purfume"
     },
     {
       "primitives": [
@@ -5011,8 +4246,13 @@
             "TEXCOORD_0": 520
           },
           "indices": 517,
-          "material": 2
-        },
+          "material": 0
+        }
+      ],
+      "name": "Skin_Lotion"
+    },
+    {
+      "primitives": [
         {
           "attributes": {
             "POSITION": 522,
@@ -5020,10 +4260,10 @@
             "TEXCOORD_0": 524
           },
           "indices": 521,
-          "material": 1
+          "material": 0
         }
       ],
-      "name": "Fence002"
+      "name": "Facecare"
     },
     {
       "primitives": [
@@ -5034,8 +4274,13 @@
             "TEXCOORD_0": 528
           },
           "indices": 525,
-          "material": 2
-        },
+          "material": 0
+        }
+      ],
+      "name": "Suncare"
+    },
+    {
+      "primitives": [
         {
           "attributes": {
             "POSITION": 530,
@@ -5043,10 +4288,10 @@
             "TEXCOORD_0": 532
           },
           "indices": 529,
-          "material": 1
+          "material": 0
         }
       ],
-      "name": "Fence003"
+      "name": "Lipstick"
     },
     {
       "primitives": [
@@ -5057,10 +4302,10 @@
             "TEXCOORD_0": 536
           },
           "indices": 533,
-          "material": 2
+          "material": 0
         }
       ],
-      "name": "DirectionBoard002"
+      "name": "Powder"
     },
     {
       "primitives": [
@@ -5071,10 +4316,10 @@
             "TEXCOORD_0": 540
           },
           "indices": 537,
-          "material": 2
+          "material": 0
         }
       ],
-      "name": "DirectionBoard003"
+      "name": "Coin"
     },
     {
       "primitives": [
@@ -5085,142 +4330,7 @@
             "TEXCOORD_0": 544
           },
           "indices": 541,
-          "material": 5
-        }
-      ],
-      "name": "Wall01"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 546,
-            "NORMAL": 547,
-            "TEXCOORD_0": 548
-          },
-          "indices": 545,
-          "material": 5
-        }
-      ],
-      "name": "Wall02"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 550,
-            "NORMAL": 551,
-            "TEXCOORD_0": 552
-          },
-          "indices": 549,
-          "material": 0
-        }
-      ],
-      "name": "Purfume"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 554,
-            "NORMAL": 555,
-            "TEXCOORD_0": 556
-          },
-          "indices": 553,
-          "material": 0
-        }
-      ],
-      "name": "Skin_Lotion"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 558,
-            "NORMAL": 559,
-            "TEXCOORD_0": 560
-          },
-          "indices": 557,
-          "material": 0
-        }
-      ],
-      "name": "Facecare"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 562,
-            "NORMAL": 563,
-            "TEXCOORD_0": 564
-          },
-          "indices": 561,
-          "material": 0
-        }
-      ],
-      "name": "Suncare"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 566,
-            "NORMAL": 567,
-            "TEXCOORD_0": 568
-          },
-          "indices": 565,
-          "material": 0
-        }
-      ],
-      "name": "Lipstick"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 570,
-            "NORMAL": 571,
-            "TEXCOORD_0": 572
-          },
-          "indices": 569,
-          "material": 0
-        }
-      ],
-      "name": "Powder"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 574,
-            "NORMAL": 575,
-            "TEXCOORD_0": 576
-          },
-          "indices": 573,
-          "material": 0
-        }
-      ],
-      "name": "Coin"
-    },
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "POSITION": 578,
-            "NORMAL": 579,
-            "TEXCOORD_0": 580
-          },
-          "indices": 577,
-          "material": 2
-        },
-        {
-          "attributes": {
-            "POSITION": 582,
-            "NORMAL": 583,
-            "TEXCOORD_0": 584
-          },
-          "indices": 581,
-          "material": 1
+          "material": 3
         }
       ],
       "name": "StreetLight021"
@@ -5229,13 +4339,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 586,
-            "NORMAL": 587,
-            "COLOR_0": 588,
-            "TEXCOORD_0": 589
+            "POSITION": 546,
+            "NORMAL": 547,
+            "COLOR_0": 548,
+            "TEXCOORD_0": 549
           },
-          "indices": 585,
-          "material": 2
+          "indices": 545,
+          "material": 3
         }
       ],
       "name": "Fence004"
@@ -5244,13 +4354,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 591,
-            "NORMAL": 592,
-            "COLOR_0": 593,
-            "TEXCOORD_0": 594
+            "POSITION": 551,
+            "NORMAL": 552,
+            "COLOR_0": 553,
+            "TEXCOORD_0": 554
           },
-          "indices": 590,
-          "material": 2
+          "indices": 550,
+          "material": 3
         }
       ],
       "name": "Fence005"
@@ -5259,13 +4369,13 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 596,
-            "NORMAL": 597,
-            "COLOR_0": 598,
-            "TEXCOORD_0": 599
+            "POSITION": 556,
+            "NORMAL": 557,
+            "COLOR_0": 558,
+            "TEXCOORD_0": 559
           },
-          "indices": 595,
-          "material": 2
+          "indices": 555,
+          "material": 3
         }
       ],
       "name": "Fence006"
@@ -5274,15 +4384,141 @@
       "primitives": [
         {
           "attributes": {
-            "POSITION": 601,
-            "NORMAL": 602,
-            "TEXCOORD_0": 603
+            "POSITION": 561,
+            "NORMAL": 562,
+            "TEXCOORD_0": 563
           },
-          "indices": 600,
-          "material": 7
+          "indices": 560,
+          "material": 6
         }
       ],
       "name": "Sphere001"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 565,
+            "NORMAL": 566,
+            "TEXCOORD_0": 567
+          },
+          "indices": 564,
+          "material": 6
+        }
+      ],
+      "name": "Sphere002"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 569,
+            "NORMAL": 570,
+            "TEXCOORD_0": 571
+          },
+          "indices": 568,
+          "material": 6
+        }
+      ],
+      "name": "Sphere003"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 573,
+            "NORMAL": 574,
+            "TEXCOORD_0": 575
+          },
+          "indices": 572,
+          "material": 6
+        }
+      ],
+      "name": "Sphere004"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 577,
+            "NORMAL": 578,
+            "TEXCOORD_0": 579
+          },
+          "indices": 576,
+          "material": 6
+        }
+      ],
+      "name": "Sphere005"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 581,
+            "NORMAL": 582,
+            "TEXCOORD_0": 583
+          },
+          "indices": 580,
+          "material": 6
+        }
+      ],
+      "name": "Sphere006"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 585,
+            "NORMAL": 586,
+            "TEXCOORD_0": 587
+          },
+          "indices": 584,
+          "material": 6
+        }
+      ],
+      "name": "Sphere007"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 589,
+            "NORMAL": 590,
+            "TEXCOORD_0": 591
+          },
+          "indices": 588,
+          "material": 6
+        }
+      ],
+      "name": "Sphere008"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 593,
+            "NORMAL": 594,
+            "TEXCOORD_0": 595
+          },
+          "indices": 592,
+          "material": 6
+        }
+      ],
+      "name": "Sphere009"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 597,
+            "NORMAL": 598,
+            "TEXCOORD_0": 599
+          },
+          "indices": 596,
+          "material": 6
+        }
+      ],
+      "name": "Sphere010"
     }
   ],
   "accessors": [
@@ -5764,7 +5000,7 @@
       "bufferView": 0,
       "byteOffset": 30520,
       "componentType": 5123,
-      "count": 6912,
+      "count": 7776,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -5772,7 +5008,7 @@
       "bufferView": 1,
       "byteOffset": 196272,
       "componentType": 5126,
-      "count": 4344,
+      "count": 4920,
       "max": [
         50.34729,
         0.00213630358,
@@ -5788,9 +5024,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 248400,
+      "byteOffset": 255312,
       "componentType": 5126,
-      "count": 4344,
+      "count": 4920,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -5798,49 +5034,7 @@
       "bufferView": 2,
       "byteOffset": 65424,
       "componentType": 5126,
-      "count": 4344,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 44344,
-      "componentType": 5123,
-      "count": 864,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 300528,
-      "componentType": 5126,
-      "count": 576,
-      "max": [
-        50.2901649,
-        -0.143358693,
-        0.7124441
-      ],
-      "min": [
-        -50.2901649,
-        -45.84086,
-        -8.861968
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 307440,
-      "componentType": 5126,
-      "count": 576,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 100176,
-      "componentType": 5126,
-      "count": 576,
+      "count": 4920,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -9104,7 +8298,7 @@
       "bufferView": 0,
       "byteOffset": 121656,
       "componentType": 5123,
-      "count": 4260,
+      "count": 4620,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -9112,7 +8306,7 @@
       "bufferView": 1,
       "byteOffset": 859272,
       "componentType": 5126,
-      "count": 2700,
+      "count": 2940,
       "max": [
         50.4484444,
         21.7824631,
@@ -9128,9 +8322,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 891672,
+      "byteOffset": 894552,
       "componentType": 5126,
-      "count": 2700,
+      "count": 2940,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -9138,49 +8332,7 @@
       "bufferView": 2,
       "byteOffset": 286424,
       "componentType": 5126,
-      "count": 2700,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 130176,
-      "componentType": 5123,
-      "count": 360,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 924072,
-      "componentType": 5126,
-      "count": 240,
-      "max": [
-        50.3622055,
-        21.7169266,
-        -4.92941475
-      ],
-      "min": [
-        -50.3811455,
-        -21.4339314,
-        -5.365639
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 926952,
-      "componentType": 5126,
-      "count": 240,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 308024,
-      "componentType": 5126,
-      "count": 240,
+      "count": 2940,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -9188,7 +8340,7 @@
       "bufferView": 0,
       "byteOffset": 130896,
       "componentType": 5123,
-      "count": 426,
+      "count": 462,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -9196,7 +8348,7 @@
       "bufferView": 1,
       "byteOffset": 929832,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "max": [
         0.38588652,
         0.351067841,
@@ -9212,9 +8364,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 933072,
+      "byteOffset": 933360,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -9222,49 +8374,7 @@
       "bufferView": 2,
       "byteOffset": 309944,
       "componentType": 5126,
-      "count": 270,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 131748,
-      "componentType": 5123,
-      "count": 36,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 936312,
-      "componentType": 5126,
-      "count": 24,
-      "max": [
-        0.3015692,
-        0.2806427,
-        -4.929417
-      ],
-      "min": [
-        -0.3015723,
-        -0.2806455,
-        -5.36563635
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 936600,
-      "componentType": 5126,
-      "count": 24,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 312104,
-      "componentType": 5126,
-      "count": 24,
+      "count": 294,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -9272,7 +8382,7 @@
       "bufferView": 0,
       "byteOffset": 131820,
       "componentType": 5123,
-      "count": 426,
+      "count": 462,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -9280,7 +8390,7 @@
       "bufferView": 1,
       "byteOffset": 936888,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "max": [
         0.335458577,
         0.387367934,
@@ -9296,9 +8406,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 940128,
+      "byteOffset": 940416,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -9306,49 +8416,7 @@
       "bufferView": 2,
       "byteOffset": 312296,
       "componentType": 5126,
-      "count": 270,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 132672,
-      "componentType": 5123,
-      "count": 36,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 943368,
-      "componentType": 5126,
-      "count": 24,
-      "max": [
-        0.2699246,
-        0.301128238,
-        -4.929417
-      ],
-      "min": [
-        -0.269937,
-        -0.3011171,
-        -5.36563635
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 943656,
-      "componentType": 5126,
-      "count": 24,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 314456,
-      "componentType": 5126,
-      "count": 24,
+      "count": 294,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -9356,7 +8424,7 @@
       "bufferView": 0,
       "byteOffset": 132744,
       "componentType": 5123,
-      "count": 426,
+      "count": 462,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -9364,7 +8432,7 @@
       "bufferView": 1,
       "byteOffset": 943944,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "max": [
         0.335458577,
         0.387367934,
@@ -9380,9 +8448,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 947184,
+      "byteOffset": 947472,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -9390,49 +8458,7 @@
       "bufferView": 2,
       "byteOffset": 314648,
       "componentType": 5126,
-      "count": 270,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 133596,
-      "componentType": 5123,
-      "count": 36,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 950424,
-      "componentType": 5126,
-      "count": 24,
-      "max": [
-        0.2699246,
-        0.301128238,
-        -4.929417
-      ],
-      "min": [
-        -0.269937,
-        -0.3011171,
-        -5.36563635
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 950712,
-      "componentType": 5126,
-      "count": 24,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 316808,
-      "componentType": 5126,
-      "count": 24,
+      "count": 294,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -9440,7 +8466,7 @@
       "bufferView": 0,
       "byteOffset": 133668,
       "componentType": 5123,
-      "count": 426,
+      "count": 462,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -9448,7 +8474,7 @@
       "bufferView": 1,
       "byteOffset": 951000,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "max": [
         0.335458577,
         0.387367934,
@@ -9464,9 +8490,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 954240,
+      "byteOffset": 954528,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -9474,49 +8500,7 @@
       "bufferView": 2,
       "byteOffset": 317000,
       "componentType": 5126,
-      "count": 270,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 134520,
-      "componentType": 5123,
-      "count": 36,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 957480,
-      "componentType": 5126,
-      "count": 24,
-      "max": [
-        0.2699246,
-        0.301128238,
-        -4.929417
-      ],
-      "min": [
-        -0.269937,
-        -0.3011171,
-        -5.36563635
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 957768,
-      "componentType": 5126,
-      "count": 24,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 319160,
-      "componentType": 5126,
-      "count": 24,
+      "count": 294,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -10558,7 +9542,7 @@
       "bufferView": 0,
       "byteOffset": 146676,
       "componentType": 5123,
-      "count": 4800,
+      "count": 5280,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -10566,7 +9550,7 @@
       "bufferView": 1,
       "byteOffset": 1034616,
       "componentType": 5126,
-      "count": 2712,
+      "count": 3032,
       "max": [
         31.9510174,
         1.2804172E-05,
@@ -10582,9 +9566,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 1067160,
+      "byteOffset": 1071000,
       "componentType": 5126,
-      "count": 2712,
+      "count": 3032,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -10592,49 +9576,7 @@
       "bufferView": 2,
       "byteOffset": 344872,
       "componentType": 5126,
-      "count": 2712,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 156276,
-      "componentType": 5123,
-      "count": 480,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1099704,
-      "componentType": 5126,
-      "count": 320,
-      "max": [
-        31.9209728,
-        -0.03499267,
-        4.548061
-      ],
-      "min": [
-        -31.9209728,
-        -6.98276663,
-        -1.30000973
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1103544,
-      "componentType": 5126,
-      "count": 320,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 366568,
-      "componentType": 5126,
-      "count": 320,
+      "count": 3032,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -10642,7 +9584,7 @@
       "bufferView": 0,
       "byteOffset": 157236,
       "componentType": 5123,
-      "count": 9600,
+      "count": 10560,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -10650,7 +9592,7 @@
       "bufferView": 1,
       "byteOffset": 1107384,
       "componentType": 5126,
-      "count": 5440,
+      "count": 6080,
       "max": [
         51.4456673,
         41.0230675,
@@ -10666,9 +9608,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 1172664,
+      "byteOffset": 1180344,
       "componentType": 5126,
-      "count": 5440,
+      "count": 6080,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -10676,49 +9618,7 @@
       "bufferView": 2,
       "byteOffset": 369128,
       "componentType": 5126,
-      "count": 5440,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 176436,
-      "componentType": 5123,
-      "count": 960,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1237944,
-      "componentType": 5126,
-      "count": 640,
-      "max": [
-        51.4106674,
-        40.98643,
-        4.548061
-      ],
-      "min": [
-        -51.4106674,
-        -0.0349933654,
-        -1.300017
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1245624,
-      "componentType": 5126,
-      "count": 640,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 412648,
-      "componentType": 5126,
-      "count": 640,
+      "count": 6080,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -10726,7 +9626,7 @@
       "bufferView": 0,
       "byteOffset": 178356,
       "componentType": 5123,
-      "count": 3960,
+      "count": 4356,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -10734,7 +9634,7 @@
       "bufferView": 1,
       "byteOffset": 1253304,
       "componentType": 5126,
-      "count": 2240,
+      "count": 2504,
       "max": [
         34.13173,
         0.287325323,
@@ -10750,9 +9650,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 1280184,
+      "byteOffset": 1283352,
       "componentType": 5126,
-      "count": 2240,
+      "count": 2504,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -10760,49 +9660,7 @@
       "bufferView": 2,
       "byteOffset": 417768,
       "componentType": 5126,
-      "count": 2240,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 186276,
-      "componentType": 5123,
-      "count": 396,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1307064,
-      "componentType": 5126,
-      "count": 264,
-      "max": [
-        34.1090775,
-        0.249944642,
-        4.548075
-      ],
-      "min": [
-        -34.1090775,
-        -3.2301383,
-        -1.30000055
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1310232,
-      "componentType": 5126,
-      "count": 264,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 435688,
-      "componentType": 5126,
-      "count": 264,
+      "count": 2504,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -11272,7 +10130,7 @@
       "bufferView": 0,
       "byteOffset": 200580,
       "componentType": 5123,
-      "count": 426,
+      "count": 462,
       "type": "SCALAR",
       "name": "accessorIndices"
     },
@@ -11280,7 +10138,7 @@
       "bufferView": 1,
       "byteOffset": 1372008,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "max": [
         0.38588652,
         0.351067841,
@@ -11296,9 +10154,9 @@
     },
     {
       "bufferView": 1,
-      "byteOffset": 1375248,
+      "byteOffset": 1375536,
       "componentType": 5126,
-      "count": 270,
+      "count": 294,
       "type": "VEC3",
       "name": "accessorNormals"
     },
@@ -11306,49 +10164,7 @@
       "bufferView": 2,
       "byteOffset": 457336,
       "componentType": 5126,
-      "count": 270,
-      "type": "VEC2",
-      "name": "accessorUVs"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 201432,
-      "componentType": 5123,
-      "count": 36,
-      "type": "SCALAR",
-      "name": "accessorIndices"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1378488,
-      "componentType": 5126,
-      "count": 24,
-      "max": [
-        0.3015692,
-        0.2806427,
-        -4.929417
-      ],
-      "min": [
-        -0.3015723,
-        -0.2806455,
-        -5.36563635
-      ],
-      "type": "VEC3",
-      "name": "accessorPositions"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 1378776,
-      "componentType": 5126,
-      "count": 24,
-      "type": "VEC3",
-      "name": "accessorNormals"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 459496,
-      "componentType": 5126,
-      "count": 24,
+      "count": 294,
       "type": "VEC2",
       "name": "accessorUVs"
     },
@@ -11543,31 +10359,409 @@
       "count": 559,
       "type": "VEC2",
       "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 213312,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1412640,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1419348,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 470880,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 219072,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1426056,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1432764,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 475352,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 224832,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1439472,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1446180,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 479824,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 230592,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1452888,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1459596,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 484296,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 236352,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1466304,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1473012,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 488768,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 242112,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1479720,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1486428,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 493240,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 247872,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1493136,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1499844,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 497712,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 253632,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1506552,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1513260,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 502184,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 259392,
+      "componentType": 5123,
+      "count": 2880,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1519968,
+      "componentType": 5126,
+      "count": 559,
+      "max": [
+        8.96795,
+        8.96795,
+        8.96795
+      ],
+      "min": [
+        -8.96795,
+        -8.96795,
+        -8.96795
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1526676,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 506656,
+      "componentType": 5126,
+      "count": 559,
+      "type": "VEC2",
+      "name": "accessorUVs"
     }
   ],
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 213312,
+      "byteLength": 265152,
       "name": "bufferViewScalar"
     },
     {
       "buffer": 0,
-      "byteOffset": 213312,
-      "byteLength": 1412640,
+      "byteOffset": 265152,
+      "byteLength": 1533384,
       "byteStride": 12,
       "name": "bufferViewFloatVec3"
     },
     {
       "buffer": 0,
-      "byteOffset": 1625952,
-      "byteLength": 470880,
+      "byteOffset": 1798536,
+      "byteLength": 511128,
       "byteStride": 8,
       "name": "bufferViewFloatVec2"
     },
     {
       "buffer": 0,
-      "byteOffset": 2096832,
+      "byteOffset": 2309664,
       "byteLength": 114112,
       "byteStride": 16,
       "name": "bufferViewFloatVec4"
@@ -11576,7 +10770,7 @@
   "buffers": [
     {
       "uri": "111.bin",
-      "byteLength": 2210944
+      "byteLength": 2423776
     }
   ],
   "materials": [
@@ -11594,33 +10788,17 @@
     {
       "pbrMetallicRoughness": {
         "baseColorTexture": {
-          "index": 1
-        },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.0
-      },
-      "doubleSided": true,
-      "name": "Trans"
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorTexture": {
-          "index": 2
-        },
-        "metallicFactor": 0.0
-      },
-      "doubleSided": true,
-      "name": "Color_Prop",
-      "extras": {
-        "babylonSeparateCullingPass": false
-      }
-    },
-    {
-      "pbrMetallicRoughness": {
-        "baseColorTexture": {
           "index": 3
         },
-        "metallicFactor": 0.0
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      },
+      "normalTexture": {
+        "index": 1
+      },
+      "occlusionTexture": {
+        "index": 2
       },
       "doubleSided": true,
       "name": "Outlet03",
@@ -11645,10 +10823,38 @@
     {
       "pbrMetallicRoughness": {
         "baseColorTexture": {
-          "index": 5
+          "index": 7
         },
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.0
+        "metallicRoughnessTexture": {
+          "index": 6
+        }
+      },
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 6
+      },
+      "doubleSided": true,
+      "name": "Prop",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 10
+        },
+        "metallicRoughnessTexture": {
+          "index": 9
+        }
+      },
+      "normalTexture": {
+        "index": 8
+      },
+      "occlusionTexture": {
+        "index": 9
       },
       "doubleSided": true,
       "name": "Outlet01",
@@ -11658,14 +10864,18 @@
     },
     {
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.733813,
-          0.654676259,
-          0.5,
-          1.0
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.546446562
+        "baseColorTexture": {
+          "index": 13
+        },
+        "metallicRoughnessTexture": {
+          "index": 12
+        }
+      },
+      "normalTexture": {
+        "index": 11
+      },
+      "occlusionTexture": {
+        "index": 12
       },
       "doubleSided": true,
       "name": "Outlet02",
@@ -11675,12 +10885,18 @@
     },
     {
       "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.5,
-          0.5,
-          0.5,
-          1.0
-        ]
+        "baseColorTexture": {
+          "index": 16
+        },
+        "metallicRoughnessTexture": {
+          "index": 15
+        }
+      },
+      "normalTexture": {
+        "index": 14
+      },
+      "occlusionTexture": {
+        "index": 15
       },
       "doubleSided": true,
       "name": "Test",
@@ -11698,17 +10914,17 @@
     {
       "sampler": 0,
       "source": 1,
-      "name": "Transparent.png"
+      "name": "Outlet03_Normal_OpenGL.png"
     },
     {
       "sampler": 0,
       "source": 2,
-      "name": "Color_prop.png"
+      "name": "Outlet03_RoughnessOutlet03_RoughnessOutlet03_Metallic.png"
     },
     {
       "sampler": 0,
       "source": 3,
-      "name": "Color_Diffuse03.png"
+      "name": "Outlet03_Base_color.png"
     },
     {
       "sampler": 0,
@@ -11718,7 +10934,62 @@
     {
       "sampler": 0,
       "source": 5,
+      "name": "Prop_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 6,
+      "name": "Prop_RoughnessProp_RoughnessProp_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 7,
+      "name": "Prop_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 8,
+      "name": "outlet01_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 9,
+      "name": "outlet01_Roughnessoutlet01_Roughnessoutlet01_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 10,
       "name": "Color_Diffuse01.png"
+    },
+    {
+      "sampler": 0,
+      "source": 11,
+      "name": "outlet02_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 12,
+      "name": "outlet02_Roughnessoutlet02_Roughnessoutlet02_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 13,
+      "name": "outlet02_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 14,
+      "name": "Test_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 15,
+      "name": "Test_RoughnessTest_RoughnessTest_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 16,
+      "name": "Test_Base_color.png"
     }
   ],
   "images": [
@@ -11726,19 +10997,52 @@
       "uri": "Color_Shop01.png"
     },
     {
-      "uri": "Transparent.png"
+      "uri": "Outlet03_Normal_OpenGL.png"
     },
     {
-      "uri": "Color_prop.png"
+      "uri": "Outlet03_RoughnessOutlet03_RoughnessOutlet03_Metallic.png"
     },
     {
-      "uri": "Color_Diffuse03.png"
+      "uri": "Outlet03_Base_color.png"
     },
     {
       "uri": "Tile01.png"
     },
     {
+      "uri": "Prop_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Prop_RoughnessProp_RoughnessProp_Metallic.png"
+    },
+    {
+      "uri": "Prop_Base_color.png"
+    },
+    {
+      "uri": "outlet01_Normal_OpenGL.png"
+    },
+    {
+      "uri": "outlet01_Roughnessoutlet01_Roughnessoutlet01_Metallic.png"
+    },
+    {
       "uri": "Color_Diffuse01.png"
+    },
+    {
+      "uri": "outlet02_Normal_OpenGL.png"
+    },
+    {
+      "uri": "outlet02_Roughnessoutlet02_Roughnessoutlet02_Metallic.png"
+    },
+    {
+      "uri": "outlet02_Base_color.png"
+    },
+    {
+      "uri": "Test_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test_RoughnessTest_RoughnessTest_Metallic.png"
+    },
+    {
+      "uri": "Test_Base_color.png"
     }
   ],
   "samplers": [
@@ -11750,402 +11054,6 @@
   "extensions": {
     "KHR_lights_punctual": {
       "lights": [
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.905882359,
-            0.882352948,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            1.0,
-            0.192156866,
-            0.192156866
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.2509804,
-            0.192156866,
-            1.0
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
-        {
-          "color": [
-            0.192156866,
-            1.0,
-            0.286274523
-          ],
-          "intensity": 0.1,
-          "type": "point"
-        },
         {
           "color": [
             0.905882359,
