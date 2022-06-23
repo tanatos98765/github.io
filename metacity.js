@@ -353,8 +353,8 @@ class App{
     _loadingModel()
     {
         
-        //for( let j = 0 ; j < 1 ; j++ ){
-            //for ( let i = 0 ; i < 4 ; i++){
+        for( let j = 0 ; j < 2 ; j++ ){
+            for ( let i = 0 ; i < 3 ; i++){
                 new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
     
                     const model = gltf.scene;
@@ -408,8 +408,8 @@ class App{
                         }
                     });
                 });
-            //}
-      //  }
+            }
+        }
         
 
         // new GLTFLoader().load("./model/outlet_20220620/json/scene.gltf", (gltf) =>{
