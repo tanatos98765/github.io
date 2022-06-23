@@ -6,7 +6,7 @@ import { GLTFLoader } from 'GltfLoader';
 import Stats from "https://tanatos98765.github.io/examples/jsm/libs/stats.module.js";
 //import { RGBELoader } from 'RGBELoader';
 
-import {Octree} from "https://github.com/tanatos98765/tanatos98765.github.io/tree/main/example/jsm/math/Octree.js" // 3차원 공간을 분할 하고 빠르게 충돌검사.
+import {Octree} from "~/example/jsm/math/Octree.js" // 3차원 공간을 분할 하고 빠르게 충돌검사.
 import {Capsule} from "https://tanatos98765.github.io/examples/jsm/math/Capsule.js"
 
 //import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
