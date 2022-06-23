@@ -353,7 +353,7 @@ class App{
     _loadingModel()
     {
         
-        for( let j = 0 ; j < 3 ; j++ ){
+        for( let j = 0 ; j < 2 ; j++ ){
             for ( let i = 0 ; i < 3 ; i++){
                 new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
     
