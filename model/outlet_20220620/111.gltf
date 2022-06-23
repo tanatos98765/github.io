@@ -4403,7 +4403,7 @@
             "TEXCOORD_0": 567
           },
           "indices": 564,
-          "material": 6
+          "material": 7
         }
       ],
       "name": "Sphere002"
@@ -4417,7 +4417,7 @@
             "TEXCOORD_0": 571
           },
           "indices": 568,
-          "material": 6
+          "material": 8
         }
       ],
       "name": "Sphere003"
@@ -4431,7 +4431,7 @@
             "TEXCOORD_0": 575
           },
           "indices": 572,
-          "material": 6
+          "material": 9
         }
       ],
       "name": "Sphere004"
@@ -4445,7 +4445,7 @@
             "TEXCOORD_0": 579
           },
           "indices": 576,
-          "material": 6
+          "material": 10
         }
       ],
       "name": "Sphere005"
@@ -4459,7 +4459,7 @@
             "TEXCOORD_0": 583
           },
           "indices": 580,
-          "material": 6
+          "material": 11
         }
       ],
       "name": "Sphere006"
@@ -4473,7 +4473,7 @@
             "TEXCOORD_0": 587
           },
           "indices": 584,
-          "material": 6
+          "material": 12
         }
       ],
       "name": "Sphere007"
@@ -4487,7 +4487,7 @@
             "TEXCOORD_0": 591
           },
           "indices": 588,
-          "material": 6
+          "material": 13
         }
       ],
       "name": "Sphere008"
@@ -4501,7 +4501,7 @@
             "TEXCOORD_0": 595
           },
           "indices": 592,
-          "material": 6
+          "material": 14
         }
       ],
       "name": "Sphere009"
@@ -4515,7 +4515,7 @@
             "TEXCOORD_0": 599
           },
           "indices": 596,
-          "material": 6
+          "material": 15
         }
       ],
       "name": "Sphere010"
@@ -10899,7 +10899,196 @@
         "index": 15
       },
       "doubleSided": true,
+      "name": "Test04",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 19
+        },
+        "metallicRoughnessTexture": {
+          "index": 18
+        }
+      },
+      "normalTexture": {
+        "index": 17
+      },
+      "occlusionTexture": {
+        "index": 18
+      },
+      "doubleSided": true,
+      "name": "Test05",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 22
+        },
+        "metallicRoughnessTexture": {
+          "index": 21
+        }
+      },
+      "normalTexture": {
+        "index": 20
+      },
+      "occlusionTexture": {
+        "index": 21
+      },
+      "doubleSided": true,
+      "name": "Test06",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 25
+        },
+        "metallicRoughnessTexture": {
+          "index": 24
+        }
+      },
+      "normalTexture": {
+        "index": 23
+      },
+      "occlusionTexture": {
+        "index": 24
+      },
+      "doubleSided": true,
+      "name": "Test07",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 28
+        },
+        "metallicRoughnessTexture": {
+          "index": 27
+        }
+      },
+      "normalTexture": {
+        "index": 26
+      },
+      "occlusionTexture": {
+        "index": 27
+      },
+      "doubleSided": true,
       "name": "Test",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 28
+        },
+        "metallicRoughnessTexture": {
+          "index": 27
+        }
+      },
+      "normalTexture": {
+        "index": 26
+      },
+      "occlusionTexture": {
+        "index": 27
+      },
+      "doubleSided": true,
+      "name": "Test02",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 31
+        },
+        "metallicRoughnessTexture": {
+          "index": 30
+        }
+      },
+      "normalTexture": {
+        "index": 29
+      },
+      "occlusionTexture": {
+        "index": 30
+      },
+      "doubleSided": true,
+      "name": "Test03",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 22
+        },
+        "metallicRoughnessTexture": {
+          "index": 21
+        }
+      },
+      "normalTexture": {
+        "index": 20
+      },
+      "occlusionTexture": {
+        "index": 21
+      },
+      "doubleSided": true,
+      "name": "Test10",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 34
+        },
+        "metallicRoughnessTexture": {
+          "index": 33
+        }
+      },
+      "normalTexture": {
+        "index": 32
+      },
+      "occlusionTexture": {
+        "index": 33
+      },
+      "doubleSided": true,
+      "name": "Test09",
+      "extras": {
+        "babylonSeparateCullingPass": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 37
+        },
+        "metallicRoughnessTexture": {
+          "index": 36
+        }
+      },
+      "normalTexture": {
+        "index": 35
+      },
+      "occlusionTexture": {
+        "index": 36
+      },
+      "doubleSided": true,
+      "name": "Test08",
       "extras": {
         "babylonSeparateCullingPass": false
       }
@@ -10979,17 +11168,122 @@
     {
       "sampler": 0,
       "source": 14,
-      "name": "Test_Normal_OpenGL.png"
+      "name": "Test03_Normal_OpenGL.png"
     },
     {
       "sampler": 0,
       "source": 15,
-      "name": "Test_RoughnessTest_RoughnessTest_Metallic.png"
+      "name": "Test03_RoughnessTest03_RoughnessTest03_Metallic.png"
     },
     {
       "sampler": 0,
       "source": 16,
+      "name": "Test03_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 17,
+      "name": "Test04_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 18,
+      "name": "Test04_RoughnessTest04_RoughnessTest04_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 19,
+      "name": "Test04_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 20,
+      "name": "Test05_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 21,
+      "name": "Test05_RoughnessTest05_RoughnessTest05_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 22,
+      "name": "Test05_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 23,
+      "name": "Test07_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 24,
+      "name": "Test07_RoughnessTest07_RoughnessTest07_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 25,
+      "name": "Test07_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 26,
+      "name": "Test_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 27,
+      "name": "Test_RoughnessTest_RoughnessTest_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 28,
       "name": "Test_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 29,
+      "name": "Test01_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 30,
+      "name": "Test01_RoughnessTest01_RoughnessTest01_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 31,
+      "name": "Test01_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 32,
+      "name": "Test06_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 33,
+      "name": "Test06_RoughnessTest06_RoughnessTest06_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 34,
+      "name": "Test06_Base_color.png"
+    },
+    {
+      "sampler": 0,
+      "source": 35,
+      "name": "Test08_Normal_OpenGL.png"
+    },
+    {
+      "sampler": 0,
+      "source": 36,
+      "name": "Test08_RoughnessTest08_RoughnessTest08_Metallic.png"
+    },
+    {
+      "sampler": 0,
+      "source": 37,
+      "name": "Test08_Base_color.png"
     }
   ],
   "images": [
@@ -11036,6 +11330,42 @@
       "uri": "outlet02_Base_color.png"
     },
     {
+      "uri": "Test03_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test03_RoughnessTest03_RoughnessTest03_Metallic.png"
+    },
+    {
+      "uri": "Test03_Base_color.png"
+    },
+    {
+      "uri": "Test04_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test04_RoughnessTest04_RoughnessTest04_Metallic.png"
+    },
+    {
+      "uri": "Test04_Base_color.png"
+    },
+    {
+      "uri": "Test05_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test05_RoughnessTest05_RoughnessTest05_Metallic.png"
+    },
+    {
+      "uri": "Test05_Base_color.png"
+    },
+    {
+      "uri": "Test07_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test07_RoughnessTest07_RoughnessTest07_Metallic.png"
+    },
+    {
+      "uri": "Test07_Base_color.png"
+    },
+    {
       "uri": "Test_Normal_OpenGL.png"
     },
     {
@@ -11043,6 +11373,33 @@
     },
     {
       "uri": "Test_Base_color.png"
+    },
+    {
+      "uri": "Test01_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test01_RoughnessTest01_RoughnessTest01_Metallic.png"
+    },
+    {
+      "uri": "Test01_Base_color.png"
+    },
+    {
+      "uri": "Test06_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test06_RoughnessTest06_RoughnessTest06_Metallic.png"
+    },
+    {
+      "uri": "Test06_Base_color.png"
+    },
+    {
+      "uri": "Test08_Normal_OpenGL.png"
+    },
+    {
+      "uri": "Test08_RoughnessTest08_RoughnessTest08_Metallic.png"
+    },
+    {
+      "uri": "Test08_Base_color.png"
     }
   ],
   "samplers": [
