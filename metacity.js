@@ -360,7 +360,7 @@ class App{
                     const model = gltf.scene;
     
                     
-                    model.position.set( 0, 0 , 0 );
+                    model.position.set( j*100, 0 , i*100 );
     
                     gltf.scene.traverse(child => {
                         const name = child.name;
