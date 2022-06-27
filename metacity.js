@@ -9,7 +9,6 @@ import { RGBELoader } from 'RGBELoader';
 import {Octree} from "./examples/jsm/math/Octree.js" // 3차원 공간을 분할 하고 빠르게 충돌검사.
 import {Capsule} from "./examples/jsm/math/Capsule.js"
 
-
 import { GUI } from './examples/jsm/libs/lil-gui.module.min.js';
 
 import { EffectComposer } from './examples/jsm/postprocessing/EffectComposer.js';
@@ -26,12 +25,7 @@ const params = {
     bloomRadius: 0
 };
 
-//let composer;
-
 class App{
-
-    
-
     constructor(){
         const divContainer = document.querySelector("#webgl-container");
         this._divContainer = divContainer;
@@ -45,15 +39,13 @@ class App{
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.VSMShadowMap;
         renderer.toneMapping = THREE.ReinhardToneMapping;
-        
+        //renderer.physicallyCorrectLights = true;
 
         this._renderer = renderer;
 
         const scene = new THREE.Scene();
         scene.background = new THREE.Color( 0xbfe3dd );
         this._scene = scene;
-
-        
 
         this._setupOctree();
         this._setupCamera();
@@ -76,32 +68,31 @@ class App{
 				this._composer.addPass( renderPass );
 				this._composer.addPass( bloomPass );
 
+                const gui = new GUI();
 
-        // const gui = new GUI();
+            gui.add( params, 'exposure', 0.1, 2 ).onChange( function ( value ) {
 
-        //     gui.add( params, 'exposure', 0.1, 2 ).onChange( function ( value ) {
+                renderer.toneMappingExposure = Math.pow( value, 4.0 );
 
-        //         renderer.toneMappingExposure = Math.pow( value, 4.0 );
+            } );
 
-        //     } );
+            gui.add( params, 'bloomThreshold', 0.0, 1.0 ).onChange( function ( value ) {
 
-        //     gui.add( params, 'bloomThreshold', 0.0, 1.0 ).onChange( function ( value ) {
+                bloomPass.threshold = Number( value );
 
-        //         bloomPass.threshold = Number( value );
+            } );
 
-        //     } );
+            gui.add( params, 'bloomStrength', 0.0, 3.0 ).onChange( function ( value ) {
 
-        //     gui.add( params, 'bloomStrength', 0.0, 3.0 ).onChange( function ( value ) {
+                bloomPass.strength = Number( value );
 
-        //         bloomPass.strength = Number( value );
+            } );
 
-        //     } );
+            gui.add( params, 'bloomRadius', 0.0, 1.0 ).step( 0.01 ).onChange( function ( value ) {
 
-        //     gui.add( params, 'bloomRadius', 0.0, 1.0 ).step( 0.01 ).onChange( function ( value ) {
+                bloomPass.radius = Number( value );
 
-        //         bloomPass.radius = Number( value );
-
-        //     } );
+            } );
 
         window.onresize = this.resize.bind(this); // 창크기가 변경될때 마다 속성값 재정의 때문에 ( App 클래스가 변경될때 )
         this.resize(); // 생성자에서 무조건 한번 호출
@@ -218,7 +209,7 @@ class App{
         //const height = this._divContainer.clientHeight;
         const camera = new THREE.PerspectiveCamera(
             40,
-            window.innerWidth/window.innerheight,
+            window.innerWidth/window.height,
             1,
             1000
         );
@@ -256,7 +247,7 @@ class App{
         const color = 0xffffff;
         const intensity = 1;
         const directionalLight = new THREE.DirectionalLight(color, intensity);
-        directionalLight.position.set( 5, 148, -100 );
+        directionalLight.position.set( 5, 148, 0 );
         directionalLight.target.position.set(0,0,0);
         
         this._scene.add(directionalLight);
@@ -446,10 +437,10 @@ class App{
 
         // this._scene.background = textureEquirec;
 
-        const geometry = new THREE.BoxGeometry( 10, 10, 10 );
+        const geometry = new THREE.BoxGeometry( 5, 5, 5 );
         sphereMaterial = new THREE.MeshStandardMaterial();
         sphereMesh = new THREE.Mesh( geometry, sphereMaterial );
-        sphereMesh.position.set(0,0,0);
+        sphereMesh.position.set(-10,3,0);
         sphereMaterial.metalness = 0.5;
         sphereMaterial.roughness = 0;
         // sphereMaterial.
@@ -482,31 +473,31 @@ class App{
             this._scene.add(model);
         });
 
-        // new GLTFLoader().load("./model/outlet_20220620/tool_trans/Trans.gltf", (gltf) =>{
+        new GLTFLoader().load("./model/outlet_20220620/tool_trans/Trans.gltf", (gltf) =>{
 
-        //     const model = gltf.scene;
-        //     model.position.set(12, 0, 0);      
-        //     model.scale.set(1,1,1);
+            const model = gltf.scene;
+            model.position.set(12, 0, 0);      
+            model.scale.set(1,1,1);
             
-        //     model.traverse(child => {
-        //         if( child instanceof THREE.Mesh)
-        //         {
-        //             child.material.envMap = textureEquirec;
-        //             //  child.material.alphaMap = alphaMapImg;
-        //             // child.material.roughness = 0;
-        //             //  child.material.update();
-        //             //child.material.opacity = 0.5;
+            model.traverse(child => {
+                if( child instanceof THREE.Mesh)
+                {
+                    child.material.envMap = textureEquirec;
+                    //  child.material.alphaMap = alphaMapImg;
+                    // child.material.roughness = 0;
+                    //  child.material.update();
+                    //child.material.opacity = 0.5;
 
-        //              console.log(child);
-        //             //child.material.wireframe = true;
-        //             // child.material.side = THREE.FrontSide;
-        //             // console.log(child.material);
-        //         }
-        //     });
-        //     // model.material.envMap = textureEquirec;
-        //     // console.log(model);
-        //     this._scene.add(model);
-        // });
+                     console.log(child);
+                    //child.material.wireframe = true;
+                    // child.material.side = THREE.FrontSide;
+                    // console.log(child.material);
+                }
+            });
+            // model.material.envMap = textureEquirec;
+            // console.log(model);
+            this._scene.add(model);
+        });
         
         // for( let j = 0 ; j < 2 ; j++ ){
             // for ( let i = 0 ; i < 3 ; i++){
@@ -700,7 +691,7 @@ class App{
 
     _setupModel()
     {
-         this._makeBoxGemetry( 2,1,0);        
+         this._makeBoxGemetry( 5,1,0);        
           this._makePlangeometry();
 
         const scene = this._scene;
@@ -772,7 +763,7 @@ class App{
 
     render(time)
     {
-        // this._renderer.render(this._scene, this._camera); // 후처리 효과를 쓰면 기존 렌더를 제거 하고 후처리 렌더를 쓴다.
+        //this._renderer.render(this._scene, this._camera);
         this.update(time);
         requestAnimationFrame(this.render.bind(this)); // redner 메서드가 계속 호출되게 한다.
         this._composer.render(time);
@@ -831,7 +822,6 @@ class App{
         if(this._boxHelper) {
             this._boxHelper.update();
         }
-        
 
         this._fps.update();
 
@@ -920,8 +910,6 @@ class App{
              );
 
         }
-
-        
 
         this._previousTime = time;
     }
