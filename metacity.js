@@ -508,16 +508,6 @@ class App{
         //     this._scene.add(model);
         // });
         
-<<<<<<< Updated upstream
-        for( let j = 0 ; j < 1 ; j++ ){
-            for ( let i = 0 ; i < 3 ; i++){
-                new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
-    
-                    const model = gltf.scene;
-    
-                    
-                    model.position.set( j*100, 0 , i*100 );
-=======
         // for( let j = 0 ; j < 2 ; j++ ){
             // for ( let i = 0 ; i < 3 ; i++){
                 new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
@@ -525,7 +515,6 @@ class App{
                     const model = gltf.scene;
                     // model.visible = false;
                     model.position.set( 0, 0 , 0 );
->>>>>>> Stashed changes
     
                     gltf.scene.traverse(child => {
                         
