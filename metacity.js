@@ -4,14 +4,34 @@ import {RectAreaLightUniformsLib} from  'RectAreaLightUniformsLib';
 import {RectAreaLightHelper} from 'RectAreaLightHelper';
 import { GLTFLoader } from 'GltfLoader';
 import Stats from "./examples/jsm/libs/stats.module.js";
-//import { RGBELoader } from 'RGBELoader';
+import { RGBELoader } from 'RGBELoader';
 
 import {Octree} from "./examples/jsm/math/Octree.js" // 3차원 공간을 분할 하고 빠르게 충돌검사.
 import {Capsule} from "./examples/jsm/math/Capsule.js"
 
+
+import { GUI } from './examples/jsm/libs/lil-gui.module.min.js';
+
+import { EffectComposer } from './examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from './examples/jsm/postprocessing/RenderPass.js';
+import { ShaderPass } from './examples/jsm/postprocessing/ShaderPass.js';
+import { UnrealBloomPass } from './examples/jsm/postprocessing/UnrealBloomPass.js';
+
 //import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 
+const params = {
+    exposure: 1.05,
+    bloomStrength: 0.5,
+    bloomThreshold: 0.05,
+    bloomRadius: 0
+};
+
+//let composer;
+
 class App{
+
+    
+
     constructor(){
         const divContainer = document.querySelector("#webgl-container");
         this._divContainer = divContainer;
@@ -24,12 +44,16 @@ class App{
 
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.VSMShadowMap;
+        renderer.toneMapping = THREE.ReinhardToneMapping;
+        
 
         this._renderer = renderer;
 
         const scene = new THREE.Scene();
         scene.background = new THREE.Color( 0xbfe3dd );
         this._scene = scene;
+
+        
 
         this._setupOctree();
         this._setupCamera();
@@ -39,6 +63,45 @@ class App{
         this._setupModel();
         this._setupControls();
         // this._onkeydown();
+
+        const renderPass = new RenderPass( this._scene, this._camera );
+
+        console.log(window);
+        const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
+				bloomPass.threshold = params.bloomThreshold;
+				bloomPass.strength = params.bloomStrength;
+				bloomPass.radius = params.bloomRadius;
+
+				this._composer = new EffectComposer( this._renderer );
+				this._composer.addPass( renderPass );
+				this._composer.addPass( bloomPass );
+
+
+        // const gui = new GUI();
+
+        //     gui.add( params, 'exposure', 0.1, 2 ).onChange( function ( value ) {
+
+        //         renderer.toneMappingExposure = Math.pow( value, 4.0 );
+
+        //     } );
+
+        //     gui.add( params, 'bloomThreshold', 0.0, 1.0 ).onChange( function ( value ) {
+
+        //         bloomPass.threshold = Number( value );
+
+        //     } );
+
+        //     gui.add( params, 'bloomStrength', 0.0, 3.0 ).onChange( function ( value ) {
+
+        //         bloomPass.strength = Number( value );
+
+        //     } );
+
+        //     gui.add( params, 'bloomRadius', 0.0, 1.0 ).step( 0.01 ).onChange( function ( value ) {
+
+        //         bloomPass.radius = Number( value );
+
+        //     } );
 
         window.onresize = this.resize.bind(this); // 창크기가 변경될때 마다 속성값 재정의 때문에 ( App 클래스가 변경될때 )
         this.resize(); // 생성자에서 무조건 한번 호출
@@ -154,8 +217,8 @@ class App{
         //const width = this._divContainer.clientWidth;
         //const height = this._divContainer.clientHeight;
         const camera = new THREE.PerspectiveCamera(
-            60,
-            window.innerWidth/window.height,
+            40,
+            window.innerWidth/window.innerheight,
             1,
             1000
         );
@@ -191,9 +254,9 @@ class App{
     _setupLight()
     {
         const color = 0xffffff;
-        const intensity = 1.5;
+        const intensity = 1;
         const directionalLight = new THREE.DirectionalLight(color, intensity);
-        directionalLight.position.set( 5, 148, -160 );
+        directionalLight.position.set( 5, 148, -100 );
         directionalLight.target.position.set(0,0,0);
         
         this._scene.add(directionalLight);
@@ -215,7 +278,7 @@ class App{
         this._scene.add(helper);
 
 
-        const ambientLight = new THREE.AmbientLight( 0xffffff, 1);
+        const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5);
         ambientLight.position.set(0, 0, 0);
         this._scene.add(ambientLight);
          
@@ -294,6 +357,11 @@ class App{
 
     }
 
+    _setEnvironmentMap()
+    {
+
+    }
+
     _makeBoxGemetry( x, y, z )
     {
         const geometry = new THREE.BoxGeometry(1,1,1);        
@@ -328,7 +396,7 @@ class App{
         this._scene.add( plane );
         plane.receiveShadow = true;
 
-        console.log(plane);
+        //console.log(plane);
 
         this._worldOctree.fromGraphNode(plane);
     }
@@ -352,7 +420,95 @@ class App{
 
     _loadingModel()
     {
+
+        let textureEquirec, alphaMapImg;
+        let sphereMaterial, sphereMesh;
+
+
+        const alphaMap = new THREE.TextureLoader();
+        alphaMapImg = alphaMap.load( './model/outlet_20220620/tool_trans/alphamap.png' );
+
+        const textureLoader = new THREE.TextureLoader();
+        textureEquirec = textureLoader.load( './model/outlet_20220620/evnMap.png' );
+        textureEquirec.mapping = THREE.EquirectangularReflectionMapping;
+        textureEquirec.encoding = THREE.sRGBEncoding;
+
+        const cubeTextureLoader = new THREE.CubeTextureLoader()
+
+        const environmentMapTexture = cubeTextureLoader.load([
+            './model/outlet_20220620/evnMap.png',
+            './model/outlet_20220620/evnMap.png',
+            './model/outlet_20220620/evnMap.png',
+            './model/outlet_20220620/evnMap.png',
+            './model/outlet_20220620/evnMap.png',
+            './model/outlet_20220620/evnMap.png'
+        ]);
+
+        // this._scene.background = textureEquirec;
+
+        const geometry = new THREE.BoxGeometry( 10, 10, 10 );
+        sphereMaterial = new THREE.MeshStandardMaterial();
+        sphereMesh = new THREE.Mesh( geometry, sphereMaterial );
+        sphereMesh.position.set(0,0,0);
+        sphereMaterial.metalness = 0.5;
+        sphereMaterial.roughness = 0;
+        // sphereMaterial.
+        sphereMaterial.envMap = textureEquirec;
+        // console.log(sphereMaterial);
+        this._scene.add( sphereMesh );
+
+        new GLTFLoader().load("./model/outlet_20220620/tans/escal.gltf", (gltf) =>{
+
+            const model = gltf.scene;
+            model.position.set(12, 0, 0);      
+            model.scale.set(1,1,1);
+            
+            model.traverse(child => {
+                if( child instanceof THREE.Mesh)
+                {
+                     child.material.envMap = textureEquirec;
+                    // child.material.roughness = 0;
+                    //  child.material.update();
+                    //child.material.opacity = 0.5;
+
+                     console.log(child.material);
+                    //child.material.wireframe = true;
+                    // child.material.side = THREE.FrontSide;
+                    // console.log(child.material);
+                }
+            });
+            // model.material.envMap = textureEquirec;
+            // console.log(model);
+            this._scene.add(model);
+        });
+
+        // new GLTFLoader().load("./model/outlet_20220620/tool_trans/Trans.gltf", (gltf) =>{
+
+        //     const model = gltf.scene;
+        //     model.position.set(12, 0, 0);      
+        //     model.scale.set(1,1,1);
+            
+        //     model.traverse(child => {
+        //         if( child instanceof THREE.Mesh)
+        //         {
+        //             child.material.envMap = textureEquirec;
+        //             //  child.material.alphaMap = alphaMapImg;
+        //             // child.material.roughness = 0;
+        //             //  child.material.update();
+        //             //child.material.opacity = 0.5;
+
+        //              console.log(child);
+        //             //child.material.wireframe = true;
+        //             // child.material.side = THREE.FrontSide;
+        //             // console.log(child.material);
+        //         }
+        //     });
+        //     // model.material.envMap = textureEquirec;
+        //     // console.log(model);
+        //     this._scene.add(model);
+        // });
         
+<<<<<<< Updated upstream
         for( let j = 0 ; j < 1 ; j++ ){
             for ( let i = 0 ; i < 3 ; i++){
                 new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
@@ -361,10 +517,33 @@ class App{
     
                     
                     model.position.set( j*100, 0 , i*100 );
+=======
+        // for( let j = 0 ; j < 2 ; j++ ){
+            // for ( let i = 0 ; i < 3 ; i++){
+                new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
+    
+                    const model = gltf.scene;
+                    // model.visible = false;
+                    model.position.set( 0, 0 , 0 );
+>>>>>>> Stashed changes
     
                     gltf.scene.traverse(child => {
+                        
                         const name = child.name;
-                        // console.log(name);
+
+                         if( name.indexOf("Escal01") != -1){
+
+                            child.traverse(child3 => {
+                                if( child3 instanceof THREE.Mesh)
+                                {
+                                    // console.log(child.material);
+                                    child3.material.envMap = textureEquirec;
+                                     
+                                    // child3.material.roughness = 0.2;
+                                    //  console.log(child3.material);
+                                }
+                            });
+                        }
         
                         if( name.indexOf("Omni") != -1){
                             // console.log(child.name);
@@ -377,7 +556,7 @@ class App{
                         if( name.indexOf("Tile") != -1 )
                         {
                             child.material.roughness = 1;
-                            console.log(child);
+                            // console.log(child);
                         }
                     });
         
@@ -408,8 +587,11 @@ class App{
                         }
                     });
                 });
-            }
-        }
+            // }
+        // }
+        
+    
+        
         
 
         // new GLTFLoader().load("./model/outlet_20220620/json/scene.gltf", (gltf) =>{
@@ -437,6 +619,8 @@ class App{
         //     this._scene.add(gltf.scene);
 
         // });
+
+        
 
         new GLTFLoader().load("./model/ani/Soldier.glb", (gltf) =>
         {
@@ -593,14 +777,16 @@ class App{
 
         this._camera.updateProjectionMatrix();
         this._renderer.setSize(width, height);
+        this._composer.setSize( width, height );
     }
 
 
     render(time)
     {
-        this._renderer.render(this._scene, this._camera);
+        // this._renderer.render(this._scene, this._camera); // 후처리 효과를 쓰면 기존 렌더를 제거 하고 후처리 렌더를 쓴다.
         this.update(time);
         requestAnimationFrame(this.render.bind(this)); // redner 메서드가 계속 호출되게 한다.
+        this._composer.render(time);
     }
 
     
@@ -656,6 +842,7 @@ class App{
         if(this._boxHelper) {
             this._boxHelper.update();
         }
+        
 
         this._fps.update();
 
@@ -744,6 +931,8 @@ class App{
              );
 
         }
+
+        
 
         this._previousTime = time;
     }
