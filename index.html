@@ -19,7 +19,27 @@
         <script type="module" src="metacity.js" defer></script>        
     </head>
     <body>
+        
+        <div id="css"></div>
         <div id="webgl-container"></div>
+
+        <hr>
+    <div id="status1" style="color: rgb(161, 9, 9);">Joystick 1</div>
+    <hr>
+    <div style="border: 0px solid rgb(169, 20, 20); width: 150px; position: absolute; left:100px; bottom: 80px;">
+        <img src="./Joystick/Handle_Outline.png" style="-webkit-user-drag: none;"/>
+        <div id="stick1" style="position: absolute; left:32px; top:32px;">
+        <img src="./Joystick/Handle_Plain.png"/>      
+        </div>
+    </div>
+
+    <script type="module" src="./lib/JoystickController.js" defer></script>
+
+        
+        
+
+        <!-- <div id="canvas-output"></div>
+            <video id="video" src="https://youtu.be/eTdfSRK55Hk"></video> -->
     </body>    
     </script>
 </html>

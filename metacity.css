@@ -1,7 +1,7 @@
 * {
     outline:none;
     margin:0;
-
+    overflow: hidden;
 
 }
 
@@ -10,6 +10,7 @@ body{
 
 }
 
+#css,
 #webgl-container{
     position:absolute;
     top:0;
@@ -17,3 +18,14 @@ body{
     width:100%;
     height:100%;
 }
+
+#play {
+    z-index: 100000;
+    height: 60px;
+    width: 100px;
+    margin: -30px -50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+  }

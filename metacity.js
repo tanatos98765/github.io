@@ -11,11 +11,23 @@ import {Capsule} from "./examples/jsm/math/Capsule.js"
 
 import { GUI } from './examples/jsm/libs/lil-gui.module.min.js';
 
+/**
+ * BLOOM 효과를 위해 추가
+ */
 import { EffectComposer } from './examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from './examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from './examples/jsm/postprocessing/ShaderPass.js';
 import { UnrealBloomPass } from './examples/jsm/postprocessing/UnrealBloomPass.js';
 
+/**
+ * 동영상 재생용으로 추가.
+ */
+import { CSS3DRenderer, CSS3DObject } from './examples/jsm/renderers/CSS3DRenderer.js'; 
+
+/**
+ * 가상 조이스틱
+ */
+import {joystick1} from './lib/JoystickController.js';
 //import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 
 const params = {
@@ -25,12 +37,14 @@ const params = {
     bloomRadius: 0
 };
 
+
+
 class App{
     constructor(){
         const divContainer = document.querySelector("#webgl-container");
         this._divContainer = divContainer;
 
-        const renderer = new THREE.WebGLRenderer({antialias:true});
+        const renderer = new THREE.WebGLRenderer({alpha: true,antialias:true});
         //renderer.physicallyCorrectLights = true;
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.shadowMap.enabled = true;
@@ -47,6 +61,8 @@ class App{
         scene.background = new THREE.Color( 0xbfe3dd );
         this._scene = scene;
 
+        
+
         this._setupOctree();
         this._setupCamera();
         this._setupLight();
@@ -54,48 +70,57 @@ class App{
          this._loadingModel();
         this._setupModel();
         this._setupControls();
+
+
+        
+
+       
+        //this.onYouTubeIframeAPIReady();
         // this._onkeydown();
 
-        const renderPass = new RenderPass( this._scene, this._camera );
+        // const renderPass = new RenderPass( this._scene, this._camera );
+        
+        // const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
+		// 		bloomPass.threshold = params.bloomThreshold;
+		// 		bloomPass.strength = params.bloomStrength;
+		// 		bloomPass.radius = params.bloomRadius;
 
-        console.log(window);
-        const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
-				bloomPass.threshold = params.bloomThreshold;
-				bloomPass.strength = params.bloomStrength;
-				bloomPass.radius = params.bloomRadius;
+		// 		this._composer = new EffectComposer( this._renderer );
+		// 		this._composer.addPass( renderPass );
+		// 		this._composer.addPass( bloomPass );
 
-				this._composer = new EffectComposer( this._renderer );
-				this._composer.addPass( renderPass );
-				this._composer.addPass( bloomPass );
-
+                /*
                 const gui = new GUI();
 
-            gui.add( params, 'exposure', 0.1, 2 ).onChange( function ( value ) {
+        gui.add( params, 'exposure', 0.1, 2 ).onChange( function ( value ) {
 
-                renderer.toneMappingExposure = Math.pow( value, 4.0 );
+            renderer.toneMappingExposure = Math.pow( value, 4.0 );
 
-            } );
+        } );
 
-            gui.add( params, 'bloomThreshold', 0.0, 1.0 ).onChange( function ( value ) {
+        gui.add( params, 'bloomThreshold', 0.0, 1.0 ).onChange( function ( value ) {
 
-                bloomPass.threshold = Number( value );
+            bloomPass.threshold = Number( value );
 
-            } );
+        } );
 
-            gui.add( params, 'bloomStrength', 0.0, 3.0 ).onChange( function ( value ) {
+        gui.add( params, 'bloomStrength', 0.0, 3.0 ).onChange( function ( value ) {
 
-                bloomPass.strength = Number( value );
+            bloomPass.strength = Number( value );
 
-            } );
+        } );
 
-            gui.add( params, 'bloomRadius', 0.0, 1.0 ).step( 0.01 ).onChange( function ( value ) {
+        gui.add( params, 'bloomRadius', 0.0, 1.0 ).step( 0.01 ).onChange( function ( value ) {
 
-                bloomPass.radius = Number( value );
+            bloomPass.radius = Number( value );
 
-            } );
+        } ); */
 
+        // this._init();        
         window.onresize = this.resize.bind(this); // 창크기가 변경될때 마다 속성값 재정의 때문에 ( App 클래스가 변경될때 )
         this.resize(); // 생성자에서 무조건 한번 호출
+
+        
 
         requestAnimationFrame(this.render.bind(this)); // 렌더메서드를 호출. 
         
@@ -105,6 +130,140 @@ class App{
     _setupOctree(){
         this._worldOctree = new Octree();
     }
+
+    /**
+     * 유튜브 로딩을 위한 함수들.
+     */
+
+     
+
+     _loadYouTubeApi() {
+
+        console.log("loadYouTubeApi");     
+     
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
+
+      _createYoutubeVideo() {
+
+
+        console.log("_createYoutubeVideo");
+        this._cssscene = new THREE.Scene();
+        this._cssrenderer = new CSS3DRenderer();
+        this._cssrenderer.setSize(window.innerWidth, window.innerHeight);
+        //this._divContainer.appendChild(this._cssrenderer.domElement);
+        document.querySelector('#css').appendChild(this._cssrenderer.domElement);
+     
+        var videodiv = document.createElement('div');
+        videodiv.style.width = '480px';
+        videodiv.style.height = '360px';
+        videodiv.style.backgroundColor = 'pink';
+        videodiv.setAttribute("id", "videoframe");
+     
+        var cssobject = new CSS3DObject(videodiv);
+        cssobject.position.set(0, 0, 0);
+        cssobject.rotation.y = 0;
+        cssobject.scale.set(1,1, 1);
+     
+        this._cssscene.add(cssobject);
+     
+        var occlusionMaterial = new THREE.MeshPhongMaterial({
+          opacity: 0.0,
+          color: new THREE.Color('black'),
+          blending: THREE.NoBlending,
+          side: THREE.DoubleSide,
+        });
+     
+        var webglrepresentation = new THREE.Mesh(new THREE.PlaneGeometry(480, 360), occlusionMaterial);
+        webglrepresentation.position.copy(cssobject.position);
+        webglrepresentation.rotation.copy(cssobject.rotation);
+        webglrepresentation.scale.copy(cssobject.scale);
+        this._scene.add(webglrepresentation);
+      }
+
+      
+      
+     
+      _init() {
+        // camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 100);
+        // camera.position.z = 10;
+     
+        // scene = new THREE.Scene();
+     
+        // renderer = new THREE.WebGLRenderer({
+        //   alpha: true,
+        //   antialias: true
+        // });
+        // renderer.setClearColor(0x000000, 0);
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        // document.querySelector('#webgl').appendChild(renderer.domElement);
+     
+        // var boxgeometry = new THREE.BoxGeometry(1, 1, 1);
+        // var normalmaterial = new THREE.MeshNormalMaterial();
+     
+        // mesh = new THREE.Mesh(boxgeometry, normalmaterial);
+        // scene.add(mesh);
+     
+        this._createYoutubeVideo();
+     
+        // var backPlaneGeometry = new THREE.PlaneGeometry(20, 10)
+        // var backPlane = new THREE.Mesh(backPlaneGeometry, normalmaterial);
+        // backPlane.position.set(0,0,-10);
+        // scene.add(backPlane);
+     
+        // controls = new THREE.OrbitControls(camera, renderer.domElement);
+     
+     
+        // window.addEventListener('resize', onWindowResize, false);
+        this._loadYouTubeApi();
+      }
+     
+    //   _animate() {
+     
+    //     requestAnimationFrame(animate);
+    //     controls.update();
+    //     renderer.render(scene, camera);
+    //     cssrenderer.render(cssscene, camera); //BOOM
+    //   }
+     
+    //   _onWindowResize() {
+    //     camera.aspect = window.innerWidth / window.innerHeight;
+    //     camera.updateProjectionMatrix();
+     
+    //     // webglrenderer.setSize( window.innerWidth, window.innerHeight );
+    //     // cssrenderer.setSize( window.innerWidth, window.innerHeight ); 
+    //   }
+     
+     
+      
+     
+    //   $("#play").on('click', () => {
+         
+    //     player.playVideo();
+    //     console.log("playing video");
+        
+    //     //HACKY WAY TO GET RID OF RANDOM DIV
+    //     $("#play").hide();
+    //     setTimeout(function(){ 
+          
+    //       $("div #videoframe").css("width", "0px");
+    //       $("div #videoframe").css("height", "0px");
+    //       $("div #videoframe").css("background-color", "yellow");
+     
+    //       $("iframe").css("width", "480px");
+    //       $("iframe").css("height", "360px");
+    //       $("iframe").css("background-color", "black");
+    //    }, 1000);
+    //   });
+      /**
+       * 유튜브 로딩을 위한 함수 끝
+       */
+     
+
+
     
     // function OnKeyDown(e) {
 
@@ -141,28 +300,82 @@ class App{
     //     });
     // }
     
+    // _processAnimation()
+    // {
+    //     const previousAnimationAction = this._currentAnimationAction;
+
+    //     if( this._pressedKey["w"] || this._pressedKey["a"] || this._pressedKey["s"] || this._pressedKey["d"] )
+    //     {
+    //         if( this._pressedKey["shift"] )
+    //         {
+    //            this._currentAnimationAction = this._animationMap["Run"];
+    //            //this._speed = 4;
+    //            this._maxSpeed = 9;
+    //            this._acceleration = 1;
+
+    //         }   
+    //         else
+    //         {
+    //             this._currentAnimationAction = this._animationMap["Walk"];
+    //             //this._speed = 1.2;
+    //             this._maxSpeed = 4.5;
+    //             this._acceleration = 0.5;
+    //         }     
+    //     }
+    //     else
+    //     {
+    //         this._currentAnimationAction = this._animationMap["Idle"];
+    //         this._speed = 0;
+    //         this._maxSpeed = 0;
+    //         this._acceleration = 0;
+    //     }
+
+    //     if( previousAnimationAction !== this._currentAnimationAction)
+    //     {
+    //         previousAnimationAction.fadeOut( 0.5 );
+    //         this._currentAnimationAction.reset().fadeIn(0.5).play();
+    //     }
+    // }
+
     _processAnimation()
     {
         const previousAnimationAction = this._currentAnimationAction;
+        const joystickValue = Math.abs(joystick1.value.x) + Math.abs(joystick1.value.y);
 
-        if( this._pressedKey["w"] || this._pressedKey["a"] || this._pressedKey["s"] || this._pressedKey["d"] )
+        //console.log(joystickValue);
+        //if(this._pressedKeys["w"] ||this._pressedKeys["a"] ||this._pressedKeys["s"] ||this._pressedKeys["d"])
+        if(joystick1.active && joystickValue > 0)
         {
-            if( this._pressedKey["shift"] )
-            {
-               this._currentAnimationAction = this._animationMap["Run"];
-               //this._speed = 4;
-               this._maxSpeed = 9;
-               this._acceleration = 1;
-
-            }   
-            else
+            if(joystickValue <  0.9)
             {
                 this._currentAnimationAction = this._animationMap["Walk"];
-                //this._speed = 1.2;
-                this._maxSpeed = 4.5;
-                this._acceleration = 0.5;
-            }     
+                this._maxSpeed = 2.5;
+                this._acceleration = 0.04;
+            }
+            else
+            {
+                this._currentAnimationAction = this._animationMap["Run"];
+                this._maxSpeed = 7.0;
+                this._acceleration = 0.08;
+            }
+
         }
+        // else if(this._pressedKeys["w"] ||this._pressedKeys["a"] ||this._pressedKeys["s"] ||this._pressedKeys["d"])
+        // {
+        //     if(this._speed <  2.0)
+        //     {
+        //         this._currentAnimAction = this._animMap["Walk"];
+        //         this._maxSpeed = 2.5;
+        //         this._acceleration = 0.04;
+        //     }
+        //     else
+        //     {
+        //         this._currentAnimAction = this._animMap["Run"];
+        //         this._maxSpeed = 7.0;
+        //         this._acceleration = 0.08;
+        //     }
+
+        // }
         else
         {
             this._currentAnimationAction = this._animationMap["Idle"];
@@ -171,10 +384,10 @@ class App{
             this._acceleration = 0;
         }
 
-        if( previousAnimationAction !== this._currentAnimationAction)
+        if(previousAnimationAction !== this._currentAnimationAction)
         {
-            previousAnimationAction.fadeOut( 0.5 );
-            this._currentAnimationAction.reset().fadeIn(0.5).play();
+            previousAnimationAction.fadeOut(0.8);
+            this._currentAnimationAction.reset().fadeIn(0.2).play();
         }
     }
 
@@ -244,7 +457,7 @@ class App{
     }
     _setupLight()
     {
-        const color = 0xffffff;
+        const color = 0xFFE69D;
         const intensity = 1;
         const directionalLight = new THREE.DirectionalLight(color, intensity);
         directionalLight.position.set( 5, 148, 0 );
@@ -269,7 +482,7 @@ class App{
         this._scene.add(helper);
 
 
-        const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5);
+        const ambientLight = new THREE.AmbientLight( 0xFFE69D, 2);
         ambientLight.position.set(0, 0, 0);
         this._scene.add(ambientLight);
          
@@ -448,60 +661,60 @@ class App{
         // console.log(sphereMaterial);
         this._scene.add( sphereMesh );
 
-        new GLTFLoader().load("./model/outlet_20220620/tans/escal.gltf", (gltf) =>{
+        // new GLTFLoader().load("./model/outlet_20220620/tans/escal.gltf", (gltf) =>{
 
-            const model = gltf.scene;
-            model.position.set(12, 0, 0);      
-            model.scale.set(1,1,1);
+        //     const model = gltf.scene;
+        //     model.position.set(12, 0, 0);      
+        //     model.scale.set(1,1,1);
             
-            model.traverse(child => {
-                if( child instanceof THREE.Mesh)
-                {
-                     child.material.envMap = textureEquirec;
-                    // child.material.roughness = 0;
-                    //  child.material.update();
-                    //child.material.opacity = 0.5;
+        //     model.traverse(child => {
+        //         if( child instanceof THREE.Mesh)
+        //         {
+        //              child.material.envMap = textureEquirec;
+        //             // child.material.roughness = 0;
+        //             //  child.material.update();
+        //             //child.material.opacity = 0.5;
 
-                     console.log(child.material);
-                    //child.material.wireframe = true;
-                    // child.material.side = THREE.FrontSide;
-                    // console.log(child.material);
-                }
-            });
-            // model.material.envMap = textureEquirec;
-            // console.log(model);
-            this._scene.add(model);
-        });
+        //              console.log(child.material);
+        //             //child.material.wireframe = true;
+        //             // child.material.side = THREE.FrontSide;
+        //             // console.log(child.material);
+        //         }
+        //     });
+        //     // model.material.envMap = textureEquirec;
+        //     // console.log(model);
+        //     this._scene.add(model);
+        // });
 
-        new GLTFLoader().load("./model/outlet_20220620/tool_trans/Trans.gltf", (gltf) =>{
+        // new GLTFLoader().load("./model/outlet_20220620/tool_trans/Trans.gltf", (gltf) =>{
 
-            const model = gltf.scene;
-            model.position.set(12, 0, 0);      
-            model.scale.set(1,1,1);
+        //     const model = gltf.scene;
+        //     model.position.set(12, 0, 0);      
+        //     model.scale.set(1,1,1);
             
-            model.traverse(child => {
-                if( child instanceof THREE.Mesh)
-                {
-                    child.material.envMap = textureEquirec;
-                    //  child.material.alphaMap = alphaMapImg;
-                    // child.material.roughness = 0;
-                    //  child.material.update();
-                    //child.material.opacity = 0.5;
+        //     model.traverse(child => {
+        //         if( child instanceof THREE.Mesh)
+        //         {
+        //             child.material.envMap = textureEquirec;
+        //             //  child.material.alphaMap = alphaMapImg;
+        //             // child.material.roughness = 0;
+        //             //  child.material.update();
+        //             //child.material.opacity = 0.5;
 
-                     console.log(child);
-                    //child.material.wireframe = true;
-                    // child.material.side = THREE.FrontSide;
-                    // console.log(child.material);
-                }
-            });
-            // model.material.envMap = textureEquirec;
-            // console.log(model);
-            this._scene.add(model);
-        });
+        //              console.log(child);
+        //             //child.material.wireframe = true;
+        //             // child.material.side = THREE.FrontSide;
+        //             // console.log(child.material);
+        //         }
+        //     });
+        //     // model.material.envMap = textureEquirec;
+        //     // console.log(model);
+        //     this._scene.add(model);
+        // });
         
         // for( let j = 0 ; j < 2 ; j++ ){
             // for ( let i = 0 ; i < 3 ; i++){
-                new GLTFLoader().load("./model/outlet_20220620/111.gltf", (gltf) =>{
+                new GLTFLoader().load("./model/mall/mall.gltf", (gltf) =>{
     
                     const model = gltf.scene;
                     // model.visible = false;
@@ -631,6 +844,7 @@ class App{
             const box = (new THREE.Box3).setFromObject(model);
             //  model.position.y = 1550;//(box.max.y - box.min.y)/2;
 
+            
             const height = box.max.y - box.min.y; // 캐릭터를 감싸는 바운딩 박스.
             const diameter = box.max.z - box.min.z;
 
@@ -640,13 +854,15 @@ class App{
                 diameter/2
             );
 
+            // model.position.y = 10;
+
             const axisHelper = new THREE.AxesHelper(1000);
             this._scene.add(axisHelper);
 
             const boxHelper = new THREE.BoxHelper(model);
             this._scene.add(boxHelper);
             this._boxHelper = boxHelper;
-            this._model = model;
+            this._player = model;
 
             // const boxG = new THREE.BoxGeometry(2, 2, 2);
             // const boxM = new THREE.Mesh(boxG, planeMaterial);
@@ -684,6 +900,8 @@ class App{
         
     }
 
+    
+
     _makeEmptyObject()
     {
 
@@ -692,7 +910,7 @@ class App{
     _setupModel()
     {
          this._makeBoxGemetry( 5,1,0);        
-          this._makePlangeometry();
+        //   this._makePlangeometry();
 
         const scene = this._scene;
 
@@ -738,6 +956,88 @@ class App{
 
     }
 
+     
+
+    // _createPlaneVideo()
+    // {
+    //     var canvas = document.createElement("canvas");
+
+    //     var canvasoutput = document.querySelector("#canvas-output");
+    //     canvasoutput[0].appendChild(canvas);        
+
+    //     var video = document.getElementById('video');
+    //     texture = new THREE.Texture(video);
+    //     texture.minFilter = THREE.LinearFilter;
+    //     texture.magFilter = THREE.LinearFilter;
+    //     texture.generateMipmaps = false;
+
+    //     var canvasMap = new THREE.Texture(canvas);
+    //     var mat = new THREE.MeshPhongMaterial();
+    //     mat.map = canvasMap;
+
+    //     const gemo = new THREE.PlaneGeometry( 20, 20 );
+
+    //     var mesh = new THREE.Mesh(gemo, mat);
+
+    //     this._scene.add(mesh);
+    // }
+
+    // 원본 코드
+    // _Element( id, x, y, z, ry ) {
+
+    //     const div = document.createElement( 'div' );        
+
+    //     div.style.width = '480px';
+    //     div.style.height = '360px';
+    //     div.style.backgroundColor = '#000';
+
+    //     const iframe = document.createElement( 'iframe' );
+    //     iframe.style.width = '480px';
+    //     iframe.style.height = '360px';
+    //     iframe.style.border = '0px';
+    //     iframe.src = [ 'https://www.youtube.com/embed/', id, '?rel=0' ].join( '' );
+    //     div.appendChild( iframe );
+
+    //     const object = new CSS3DObject( div );
+    //     object.position.set( x, y, z );
+    //     object.rotation.y = ry;
+
+    //     this._scene.add(object);
+    //     return object;
+    // }
+
+    /**
+     * 
+     * @param {*} id 불러올 주소 
+     * @param {*} x  좌표
+     * @param {*} y 
+     * @param {*} z 
+     * @param {*} ry 회전값
+     * @returns 
+     */
+    // _Element( id, x, y, z, ry ) {
+
+    //     // const div = document.createElement( 'div' );        
+
+    //     this._divContainer.style.width = '480px';
+    //     this._divContainer.style.height = '360px';
+    //     this._divContainer.style.backgroundColor = '#000';
+
+    //     const iframe = document.createElement( 'iframe' );
+    //     iframe.style.width = '480px';
+    //     iframe.style.height = '360px';
+    //     iframe.style.border = '0px';
+    //     iframe.src = [ 'https://www.youtube.com/embed/', id, '?rel=0' ].join( '' );
+    //     this._divContainer.appendChild( iframe );
+
+    //     const object = new CSS3DObject( this._divContainer );
+    //     object.position.set( x, y, z );
+    //     object.rotation.y = ry;
+
+    //     this._scene.add(object);
+    //     return object;
+    // }
+
     resize()
     {
         const width = this._divContainer.clientWidth;
@@ -757,50 +1057,185 @@ class App{
 
         this._camera.updateProjectionMatrix();
         this._renderer.setSize(width, height);
-        this._composer.setSize( width, height );
+        // this._composer.setSize( width, height );
     }
 
 
     render(time)
     {
-        //this._renderer.render(this._scene, this._camera);
+        
+        this._renderer.render(this._scene, this._camera);
+        //  this._cssrenderer.render(this._cssscene, this._camera);     
         this.update(time);
         requestAnimationFrame(this.render.bind(this)); // redner 메서드가 계속 호출되게 한다.
-        this._composer.render(time);
+        
+        
+        
+        // this._composer.render(time);
+          
+        
     }
 
     
 
-    _directionOffset() {
-        const pressedKeys = this._pressedKey;
-        let directionOffset = 0; // w
+    // _directionOffset() {
+    //     const pressedKeys = this._pressedKey;
+    //     let directionOffset = 0; // w
 
-        if (pressedKeys['w']) {
-            if (pressedKeys['a']) {
-                directionOffset = Math.PI / 4 // w+a (45도)
-            } else if (pressedKeys['d']) {
-                directionOffset = - Math.PI / 4 // w+d (-45도)
+    //     if (pressedKeys['w']) {
+    //         if (pressedKeys['a']) {
+    //             directionOffset = Math.PI / 4 // w+a (45도)
+    //         } else if (pressedKeys['d']) {
+    //             directionOffset = - Math.PI / 4 // w+d (-45도)
+    //         }
+    //     } else if (pressedKeys['s']) {
+    //         if (pressedKeys['a']) {
+    //             directionOffset = Math.PI / 4 + Math.PI / 2 // s+a (135도)
+    //         } else if (pressedKeys['d']) {
+    //             directionOffset = -Math.PI / 4 - Math.PI / 2 // s+d (-135도)
+    //         } else {
+    //             directionOffset = Math.PI // s (180도)
+    //         }
+    //     } else if (pressedKeys['a']) {
+    //         directionOffset = Math.PI / 2 // a (90도)
+    //     } else if (pressedKeys['d']) {
+    //         directionOffset = - Math.PI / 2 // d (-90도)
+    //     }
+    //     else{
+    //         directionOffset = this._previousDirectionOffset;
+    //     }
+
+    //     this._previousDirectionOffset = directionOffset
+
+    //     return directionOffset;        
+    // }
+
+    _preDirOff = Math.PI/2;
+    _angleCameraDirAxisY = Math.PI;
+    _directionOffset()
+    {
+        return this._JoysticDir();
+
+        //if(joystick1.active)
+            //return this._JoysticDir();
+
+        //else
+            //return this._KeyDir();
+    }
+
+    _JoysticDir()
+    {
+        let directionOffset = Math.PI / 2;
+
+        const pressValue = Math.abs(joystick1.value.x) * Math.abs(joystick1.value.y);
+
+        
+        if(pressValue > 0)
+        {
+            if(joystick1.active)
+            {
+                this._angleCameraDirAxisY = Math.atan2(( this._camera.position.x- this._player.position.x),
+                                                       (this._camera.position.z - this._player.position.z)) + Math.PI;
+    
+                directionOffset = Math.atan2(joystick1.value.x ,joystick1.value.y);
             }
-        } else if (pressedKeys['s']) {
-            if (pressedKeys['a']) {
-                directionOffset = Math.PI / 4 + Math.PI / 2 // s+a (135도)
-            } else if (pressedKeys['d']) {
-                directionOffset = -Math.PI / 4 - Math.PI / 2 // s+d (-135도)
-            } else {
-                directionOffset = Math.PI // s (180도)
-            }
-        } else if (pressedKeys['a']) {
-            directionOffset = Math.PI / 2 // a (90도)
-        } else if (pressedKeys['d']) {
-            directionOffset = - Math.PI / 2 // d (-90도)
-        }
-        else{
-            directionOffset = this._previousDirectionOffset;
+        }     
+        else
+        {
+            directionOffset = this._preDirOff;
         }
 
-        this._previousDirectionOffset = directionOffset
+        this._preDirOff = directionOffset;
 
-        return directionOffset;        
+        
+        return directionOffset;
+    }
+
+    _PlayerDirUpdate(deltaTime)
+    { 
+        
+        let rotateQuarternion = new THREE.Quaternion();
+
+        
+        rotateQuarternion.setFromAxisAngle(new THREE.Vector3(0,1,0),
+                                            this._angleCameraDirAxisY + this._directionOffset());   
+
+                                           
+
+                                            
+         this._player.quaternion.rotateTowards(rotateQuarternion, THREE.MathUtils.degToRad(5));
+
+
+        const walkDir  = new THREE.Vector3();
+
+        this._camera.getWorldDirection(walkDir);
+
+        walkDir.y = this._bOn_Ground ? 0 : -1;
+        walkDir.normalize();
+        walkDir.applyAxisAngle(new THREE.Vector3(0,1,0), this._directionOffset());
+        
+        if(this._speed < this._maxSpeed) 
+            this._speed += this._acceleration;
+        else
+            this._speed -= this._acceleration * 2;
+   
+        if(!this._bOn_Ground)
+        {
+            this._fallingAcceleration += 0.0;
+            this._fallingSpeed += Math.pow(this._fallingAcceleration, 2);
+        }
+        else
+        {
+            this._fallingAcceleration = 0;
+            this._fallingSpeed = 0;
+        }
+
+
+        const velocity = new THREE.Vector3(
+            walkDir.x * this._speed * -1,
+            walkDir.y * this._fallingSpeed,
+            walkDir.z * this._speed * -1
+        )
+
+        const deltaPos = velocity.clone().multiplyScalar(deltaTime);
+
+
+        this._player._capsule.translate(deltaPos);
+
+        
+
+        const result = this._worldOctree.capsuleIntersect(this._player._capsule);
+        if(result)
+        {
+            this._player._capsule.translate(result.normal.multiplyScalar(result.depth));
+            this._bOn_Ground = true;
+        }
+        else
+        {
+            this._bOn_Ground = false;
+        }
+
+        
+
+        const prevPos = this._player.position.clone();
+        const capsuleHeight = this._player._capsule.end.y - this._player._capsule.start.y + this._player._capsule.radius*2;
+
+        this._player.position.set(
+            this._player._capsule.start.x,
+            (this._player._capsule.start.y - this._player._capsule.radius + capsuleHeight/2)-0.9,
+            this._player._capsule.start.z
+        );
+
+        //this._camera.position.x += move_x;
+        //this._camera.position.z += move_z;
+        this._camera.position.x -= prevPos.x - this._player.position.x;
+        this._camera.position.z -= prevPos.z - this._player.position.z;
+
+        this._control.target.set(
+            this._player.position.x,
+            this._player.position.y + 1.0,
+            this._player.position.z
+        )
     }
 
     _speed = 0;
@@ -825,100 +1260,161 @@ class App{
 
         this._fps.update();
 
+        const deltaTime = time - this._previousTime;
+
         if( this._mixer )
         {
-            const deltaTime = time - this._previousTime;
             this._mixer.update(deltaTime);
+            this._PlayerDirUpdate(deltaTime);
+            this._processAnimation();
 
-            const angleCameraDirectionAxisY = Math.atan2(
-                (this._camera.position.x - this._model.position.x),
-                (this._camera.position.z + this._model.position.z)
-            );//- Math.PI;
 
-            const rotateQuarternion = new THREE.Quaternion();
-            rotateQuarternion.setFromAxisAngle(
-                new THREE.Vector3(0,1,0),
-                angleCameraDirectionAxisY + this._directionOffset()
-            );
+            // 
+            // 
 
-             this._model.quaternion.rotateTowards(rotateQuarternion, THREE.MathUtils.degToRad(5));
+            // const angleCameraDirectionAxisY = Math.atan2(
+            //     (this._camera.position.x - this._player.position.x),
+            //     (this._camera.position.z + this._player.position.z)
+            // );//- Math.PI;
 
-             const walkDirection = new THREE.Vector3();
-             this._camera.getWorldDirection(walkDirection);
+            // const rotateQuarternion = new THREE.Quaternion();
+            // rotateQuarternion.setFromAxisAngle(
+            //     new THREE.Vector3(0,1,0),
+            //     angleCameraDirectionAxisY + this._directionOffset()
+            // );
 
-             //walkDirection.y = 0;
-             walkDirection.y = this._bOnTheGround ? 0 : -1;
-             walkDirection.normalize();
+            //  this._player.quaternion.rotateTowards(rotateQuarternion, THREE.MathUtils.degToRad(5));
 
-             walkDirection.applyAxisAngle(new THREE.Vector3(0,1,0), this._directionOffset());
+            //  const walkDirection = new THREE.Vector3();
+            //  this._camera.getWorldDirection(walkDirection);
 
-             if( this._speed < this._maxSpeed ) this._speed += this._acceleration;
-             else this._speed -= this._acceleration*2;
+            //  //walkDirection.y = 0;
+            //  walkDirection.y = this._bOnTheGround ? 0 : -1;
+            //  walkDirection.normalize();
 
-            //  if( !this._bOnTheGround){
-            //     this._fallingAcceleration += 1;
-            //     this._fallingSpeed += Math.pow(this._fallingAcceleration, 2);
-            //  }else{
-            //     this._fallingAcceleration = 0;
-            //     this._fallingSpeed = 0;
-            //  }
+            //  walkDirection.applyAxisAngle(new THREE.Vector3(0,1,0), this._directionOffset());
 
-             const velocity = new THREE.Vector3(
-                walkDirection.x * this._speed,
-                walkDirection.y * this._fallingSpeed,
-                walkDirection.z * this._speed
-             );
+            //  if( this._speed < this._maxSpeed ) this._speed += this._acceleration;
+            //  else this._speed -= this._acceleration*2;
+
+            // //  if( !this._bOnTheGround){
+            // //     this._fallingAcceleration += 1;
+            // //     this._fallingSpeed += Math.pow(this._fallingAcceleration, 2);
+            // //  }else{
+            // //     this._fallingAcceleration = 0;
+            // //     this._fallingSpeed = 0;
+            // //  }
+
+            //  const velocity = new THREE.Vector3(
+            //     walkDirection.x * this._speed,
+            //     walkDirection.y * this._fallingSpeed,
+            //     walkDirection.z * this._speed
+            //  );
 
              
 
-              //const moveX = walkDirection.x * (this._speed * deltaTime);
-              //const moveZ = walkDirection.z * (this._speed * deltaTime);
+            //   //const moveX = walkDirection.x * (this._speed * deltaTime);
+            //   //const moveZ = walkDirection.z * (this._speed * deltaTime);
 
-            //  this._model.position.x += moveX;
-            //  this._model.position.z += moveZ;
+            // //  this._model.position.x += moveX;
+            // //  this._model.position.z += moveZ;
 
-            const deltaPosition = velocity.clone().multiplyScalar(deltaTime);
-             const result = this._worldOctree.capsuleIntersect(this._model._capsule);
-             if(result){ // 충돌한 경우.
-                this._model._capsule.translate(result.normal.multiplyScalar(result.depth));
-                this._bOnTheGround = true;
-             }else{ // 충돌하지 않은 경우.
-                this._bOnTheGround = false;
-             }
+            // const deltaPosition = velocity.clone().multiplyScalar(deltaTime);
+            //  const result = this._worldOctree.capsuleIntersect(this._player._capsule);
+            //  if(result){ // 충돌한 경우.
+            //     this._player._capsule.translate(result.normal.multiplyScalar(result.depth));
+            //     this._bOnTheGround = true;
+            //  }else{ // 충돌하지 않은 경우.
+            //     this._bOnTheGround = false;
+            //  }
 
-             const previousPosition = this._model.position.clone();
-             const capsuleHeight = this._model._capsule.end.y - this._model._capsule.start.y
-             + this._model._capsule.radius*2;
+            //  const previousPosition = this._player.position.clone();
+            //  const capsuleHeight = this._player._capsule.end.y - this._player._capsule.start.y
+            //  + this._player._capsule.radius*2;
 
-             this._model.position.set(
-                this._model._capsule.start.x, 
-                this._model._capsule.start.y - this._model._capsule.radius + capsuleHeight/2, 
-                this._model._capsule.start.z
-            );    
+            //  this._player.position.set(
+            //     this._player._capsule.start.x, 
+            //     this._player._capsule.start.y - this._player._capsule.radius + capsuleHeight/2, 
+            //     this._player._capsule.start.z
+            // );    
 
-            this._model._capsule.translate(deltaPosition);
+            // this._player._capsule.translate(deltaPosition);
 
-            // this._camera.position.x += moveX;
-            // this._camera.position.z += moveZ;
-            this._camera.position.x -= previousPosition.x - this._model.position.x;
-            this._camera.position.z -= previousPosition.z - this._model.position.z;
+            // // this._camera.position.x += moveX;
+            // // this._camera.position.z += moveZ;
+            // this._camera.position.x -= previousPosition.x - this._player.position.x;
+            // this._camera.position.z -= previousPosition.z - this._player.position.z;
 
-            this._control.target.set(
-                this._model.position.x,
-                this._model.position.y,
-                this._model.position.z
-             );
+            // this._control.target.set(
+            //     this._player.position.x,
+            //     this._player.position.y,
+            //     this._player.position.z
+            //  );
 
         }
 
         this._previousTime = time;
     }
+
+   
 }
+
+var player;
+window.onYouTubeIframeAPIReady = function () 
+      {
+        console.log("onYouTubeIframeAPIReady");
+        player = new YT.Player('videoframe', {
+          height: '2160',
+          width: '100%',
+          videoId: 'pYzX7cqK_JQ',
+          
+          playerVars: {
+            autoplay: 0,
+            suggestedQuality: 'highdef',
+            modestbranding: 'true',
+            controls: '0',
+            cc_load_policy: 3,
+            fs: 0,
+            loop: 1,
+            playsinline: 1,
+            showinfo: 0,
+            rel: 0,
+            disablekb: 1,
+            ecver: 2,
+            
+          },
+          events: {
+            'onReady': function(evt){
+                console.log("onReady");
+                
+                // evt.target.mute();
+                evt.target.playVideo();
+
+
+            //     player.sendMessage = function (a) {
+            //         a.id = this.id, a.channel = "widget", a = JSON.stringify(a);
+                    
+            //         var url = new URL(this.h.src);
+            //         var origin = url.searchParams.get("origin");
+            //         if (origin && this.h.contentWindow) {
+            //             this.h.contentWindow.postMessage(a, origin)
+            //         }
+            //   }
+            },
+          }
+        });
+
+        
+
+      function _onPlayerReady(event)
+      {
+        console.log("_onPlayerReady");
+        event.target.playVideo();
+      }
+
+    }
 
 window.onload=function()
 {
     new App();
 }
-
-
-
